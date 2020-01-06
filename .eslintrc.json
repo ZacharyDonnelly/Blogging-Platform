@@ -3,7 +3,7 @@
     "es6": true,
     "node": true
   },
-  "extends": "google",
+  "extends": ["plugin:prettier/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -13,6 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "max-len": "error"
+    "max-len": "error",
+    "prettier/prettier": "error"
   }
 }
