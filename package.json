@@ -26,7 +26,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "server": "./scripts/server-api.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

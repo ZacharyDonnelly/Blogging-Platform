@@ -1,3 +1,3 @@
-cd stubs
+cd server
 npm i
 npm start
