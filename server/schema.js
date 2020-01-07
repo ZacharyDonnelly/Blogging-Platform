@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef
-const { buildSchema } = require("graphql");
+import { buildSchema } from "graphql";
 
 export const schema = buildSchema(`
 type Query {

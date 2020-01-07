@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import express from "express";
 import cors from "cors";
 import { ApolloServer } from "apollo-server-express";
@@ -12,18 +11,21 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 
+const resolvers = {
+  hello: () => "Hello world!",
+  age: () => 1122334,
+  oldEnough: () => false
+};
+
 app.use(
   "/graphql",
   graphqlHTTP({
     schema,
-    rootValue: {
-      hello: () => "Hello world!",
-      age: () => 1122334,
-      oldEnough: () => false
-    },
+    rootValue: resolvers,
     graphiql: true
   })
 );
+
 const server = new ApolloServer({ schema });
 server.applyMiddleware({ app });
 

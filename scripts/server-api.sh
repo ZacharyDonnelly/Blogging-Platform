@@ -1,3 +1,2 @@
 cd server
-npm i
-npm start
+yarn start
