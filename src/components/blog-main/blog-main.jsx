@@ -1,7 +1,7 @@
 import React from "react";
 
 const BlogMain = () => {
-  return <></>;
+  return <div></div>;
 };
 
 export default BlogMain;

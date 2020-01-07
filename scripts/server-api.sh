@@ -1,2 +1,3 @@
-cd server
-yarn start
+cd stubs
+npm i
+npm start
