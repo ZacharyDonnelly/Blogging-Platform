@@ -1,2 +1,2 @@
 cd server
-yarn start
+yarn

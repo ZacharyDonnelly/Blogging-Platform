@@ -25,7 +25,6 @@ app.use(
     graphiql: true
   })
 );
-
 const server = new ApolloServer({ schema });
 server.applyMiddleware({ app });
 
