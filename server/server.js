@@ -27,6 +27,6 @@ app.use(
 const server = new ApolloServer({ schema });
 server.applyMiddleware({ app });
 
-app.listen({ port: 8080 }, () =>
-  console.log("Now browse to http://localhost:8080" + server.graphqlPath)
+app.listen({ port: 3006 }, () =>
+  console.log("Now browse to http://localhost:3006" + server.graphqlPath)
 );
