@@ -1,9 +1,14 @@
 export const emailAction = (value = "") => ({
-  type: "EMAIL",
+  type: "LOGIN_EMAIL",
   value
 });
 
 export const passwordAction = (value = "") => ({
-  type: "PASSWORD",
+  type: "LOGIN_PASSWORD",
+  value
+});
+
+export const displayAction = (value = "") => ({
+  type: "LOGIN_DISPLAY",
   value
 });

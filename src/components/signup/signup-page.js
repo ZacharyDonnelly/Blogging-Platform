@@ -1,78 +1,68 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import FormField from "../../containers/form-fields/form-fields";
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
-import "./signup.scss";
 import LoginNav from "../../containers/login-nav/login-nav";
+import "./signup.scss";
+import {
+  displayAction,
+  emailAction,
+  passwordAction
+} from "../../actions/form-actions";
 
-class Signup extends React.Component {
-  // const { email, password, displayName } = this.state;
-  // if (!email || !password || !displayName) {
-  //   alert("Please fill in the form!");
-  //   return;
-  // }
-  constructor() {
-    super();
-    this.state = {
-      email: "",
-      display: "",
-      password: "",
-      confirmPassword: ""
-    };
-  }
-
-  handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-
-  render() {
-    return (
-      <>
-        <LoginNav value="/login" />
-        <div className="sign-up">
-          <h2 className="title">I do not have an account</h2>
-          <span>Sign up with your email and password</span>
-          <form className="sign-up-form">
-            <FormField
+const Signup = props => {
+  return (
+    <>
+      <LoginNav value="/login" />
+      <div className="sign-up">
+        <h2 className="title">I do not have an account</h2>
+        <span>Sign up with your email and password</span>
+        <form className="sign-up-form">
+          <div className="group">
+            <input
+              className="form-input"
               type="text"
               name="display"
-              value={this.state.display}
-              handleChange={this.handleChange}
-              label="Display Name"
+              value={props.display}
+              onChange={e => props.dispatch(displayAction(e.target.value))}
               required
             />
-            <FormField
+            <label className="form-input-label">Display Name</label>
+          </div>
+          <div className="group">
+            <input
+              className="form-input"
               type="text"
               name="email"
-              value={this.state.email}
-              handleChange={this.handleChange}
-              label="Email"
+              value={props.email}
+              onChange={e => props.dispatch(emailAction(e.target.value))}
               required
             />
-            <FormField
+            <label className="form-input-label">Email</label>
+          </div>
+          <div className="group">
+            <input
+              className="form-input"
               type="password"
               name="password"
-              value={this.state.password}
-              handleChange={this.handleChange}
-              label="Password"
+              value={props.password}
+              onChange={e => props.dispatch(passwordAction(e.target.value))}
               required
             />
-            <FormField
-              type="password"
-              name="password"
-              value={this.state.confirmPassword}
-              handleChange={this.handleChange}
-              label="Current Password"
-              required
-            />
-          </form>
-          <SignupButtonRed />
-          <SignupButtonBlack />
-        </div>
-      </>
-    );
-  }
-}
-export default Signup;
+            <label className="form-input-label">Password</label>
+          </div>
+        </form>
+        <SignupButtonRed />
+        <SignupButtonBlack />
+      </div>
+    </>
+  );
+};
+const mapStateToProps = state => ({
+  email: state.email,
+  password: state.password,
+  display: state.display
+});
+
+export default connect(mapStateToProps)(Signup);
