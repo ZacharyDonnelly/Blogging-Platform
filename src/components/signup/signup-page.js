@@ -11,6 +11,8 @@ import {
   passwordAction
 } from "../../actions/form-actions";
 
+// TODO CLEAR FORM FIELDS ON PAGE CHANGE
+
 const Signup = props => {
   return (
     <>

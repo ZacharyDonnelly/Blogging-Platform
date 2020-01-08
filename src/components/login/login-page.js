@@ -1,58 +1,56 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { connect } from "react-redux";
 
-import FormField from "../../containers/form-fields/form-fields";
+import { emailAction, passwordAction } from "../../actions/form-actions";
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
-import "./login.scss";
 import LoginNav from "../../containers/login-nav/login-nav";
+import "./login.scss";
 
-class Login extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      email: "",
-      display: "",
-      password: ""
-    };
-  }
+// TODO CLEAR FORM FIELDS ON PAGE CHANGE
 
-  handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-  render() {
-    return (
-      <>
-        <LoginNav page={"Sign-up"} value={"/signup"} />
-        <div className="sign-in">
-          <h2 className="title">I already have an account</h2>
-          <span>Sign in with your email and password</span>
+const Login = props => {
+  return (
+    <>
+      <LoginNav page={"Sign-up"} value={"/signup"} />
+      <div className="sign-in">
+        <h2 className="title">I already have an account</h2>
+        <span>Sign in with your email and password</span>
 
-          <form>
-            <FormField
+        <form>
+          <div className="group">
+            <input
+              className="form-input"
+              type="text"
               name="email"
-              type="email"
-              label="Email"
-              handleChange={this.handleChange}
-              value={this.state.email}
+              value={props.email}
+              onChange={e => props.dispatch(emailAction(e.target.value))}
               required
             />
-            <FormField
-              name="password"
+            <label className="form-input-label">Email</label>
+          </div>
+          <div className="group">
+            <input
+              className="form-input"
               type="password"
-              handleChange={this.handleChange}
-              value={this.state.password}
-              label="Password"
+              name="password"
+              value={props.password}
+              onChange={e => props.dispatch(passwordAction(e.target.value))}
               required
             />
-          </form>
-          <SignupButtonRed value={"in"} />
-          <SignupButtonBlack value={"Sign-in"} />
-        </div>
-      </>
-    );
-  }
-}
+            <label className="form-input-label">Password</label>
+          </div>
+        </form>
+        <SignupButtonRed value={"in"} />
+        <SignupButtonBlack value={"Sign-in"} />
+      </div>
+    </>
+  );
+};
+const mapStateToProps = state => ({
+  email: state.email,
+  password: state.password
+});
 
-export default Login;
+export default connect(mapStateToProps)(Login);
