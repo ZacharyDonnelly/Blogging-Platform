@@ -1,7 +1,7 @@
 import React from "react";
 
 import FormField from "../../containers/form-fields/form-fields";
-import SignupButton from "../../containers/form-buttons/signup-button-black";
+import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
 import "./signup.scss";
 
@@ -17,7 +17,7 @@ class Signup extends React.Component {
       email: "",
       display: "",
       password: "",
-      user: ""
+      confirmPassword: ""
     };
   }
 
@@ -66,7 +66,7 @@ class Signup extends React.Component {
           />
         </form>
         <SignupButtonRed />
-        <SignupButton />
+        <SignupButtonBlack />
       </div>
     );
   }

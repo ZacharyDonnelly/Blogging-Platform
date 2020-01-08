@@ -2,7 +2,7 @@ import React from "react";
 
 import "./signup-button-black.scss";
 
-const SignupButton = ({ value, buttonClicked }) => {
+const SignupButtonBlack = ({ value, buttonClicked }) => {
   return (
     <div className="login-button" onClick={buttonClicked}>
       <div className="icons-top envelope">
@@ -12,8 +12,8 @@ const SignupButton = ({ value, buttonClicked }) => {
     </div>
   );
 };
-SignupButton.defaultProps = {
+SignupButtonBlack.defaultProps = {
   value: "Sign-up"
 };
 
-export default SignupButton;
+export default SignupButtonBlack;
