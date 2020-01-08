@@ -30,10 +30,12 @@ $main-color: black;
   .form-input-label {
     color: $main-color;
     font-size: 16px;
+    text-align: center;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
     left: 5px;
+    width: 100%;
     top: -18px;
   }
 }
