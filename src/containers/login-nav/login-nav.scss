@@ -1,0 +1,25 @@
+.login-nav {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin: 15px;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.nav-list {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: darken(#333, 10%);
+}

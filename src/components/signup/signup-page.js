@@ -4,6 +4,7 @@ import FormField from "../../containers/form-fields/form-fields";
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
 import "./signup.scss";
+import LoginNav from "../../containers/login-nav/login-nav";
 
 class Signup extends React.Component {
   // const { email, password, displayName } = this.state;
@@ -28,46 +29,49 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="sign-up">
-        <h2 className="title">I do not have an account</h2>
-        <span>Sign up with your email and password</span>
-        <form className="sign-up-form">
-          <FormField
-            type="text"
-            name="display"
-            value={this.state.display}
-            handleChange={this.handleChange}
-            label="Display Name"
-            required
-          />
-          <FormField
-            type="text"
-            name="email"
-            value={this.state.email}
-            handleChange={this.handleChange}
-            label="Email"
-            required
-          />
-          <FormField
-            type="password"
-            name="password"
-            value={this.state.password}
-            handleChange={this.handleChange}
-            label="Password"
-            required
-          />
-          <FormField
-            type="password"
-            name="password"
-            value={this.state.confirmPassword}
-            handleChange={this.handleChange}
-            label="Current Password"
-            required
-          />
-        </form>
-        <SignupButtonRed />
-        <SignupButtonBlack />
-      </div>
+      <>
+        <LoginNav value="/login" />
+        <div className="sign-up">
+          <h2 className="title">I do not have an account</h2>
+          <span>Sign up with your email and password</span>
+          <form className="sign-up-form">
+            <FormField
+              type="text"
+              name="display"
+              value={this.state.display}
+              handleChange={this.handleChange}
+              label="Display Name"
+              required
+            />
+            <FormField
+              type="text"
+              name="email"
+              value={this.state.email}
+              handleChange={this.handleChange}
+              label="Email"
+              required
+            />
+            <FormField
+              type="password"
+              name="password"
+              value={this.state.password}
+              handleChange={this.handleChange}
+              label="Password"
+              required
+            />
+            <FormField
+              type="password"
+              name="password"
+              value={this.state.confirmPassword}
+              handleChange={this.handleChange}
+              label="Current Password"
+              required
+            />
+          </form>
+          <SignupButtonRed />
+          <SignupButtonBlack />
+        </div>
+      </>
     );
   }
 }
