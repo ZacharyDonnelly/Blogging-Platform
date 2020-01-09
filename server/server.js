@@ -6,11 +6,11 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-import { schema } from "./schema";
+import schema from "./schema";
 
-import settings from "./config/settings";
+import settings from "./settings";
 
-import UserSchema from "./schemas/user";
+import UserSchema from "./schemas/users";
 
 const app = express();
 

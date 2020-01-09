@@ -1,9 +1,11 @@
 import { buildSchema } from "graphql";
 
-export const schema = buildSchema(`
+const schema = buildSchema(`
 type Query {
     hello: String
     age: Int
     oldEnough: Boolean
 }
 `);
+
+export default schema;
