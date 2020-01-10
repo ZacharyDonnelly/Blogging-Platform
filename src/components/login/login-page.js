@@ -1,8 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { connect } from "react-redux";
+import axios from "axios";
 
-import { emailAction, passwordAction } from "../../actions/form-actions";
+import {
+  emailAction,
+  passwordAction,
+  tokenAction
+} from "../../actions/form-actions";
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
 import LoginNav from "../../containers/login-nav/login-nav";
@@ -43,11 +48,26 @@ const Login = props => {
           </div>
         </form>
         <SignupButtonRed value={"in"} />
-        <SignupButtonBlack value={"Sign-in"} />
+        <SignupButtonBlack
+          value={"Sign-in"}
+          buttonClick={() => handleClick(props)}
+        />
       </div>
     </>
   );
 };
+const handleClick = async props => {
+  try {
+    const { data } = await axios.post("http://localhost:3006/auth", {
+      ...props
+    });
+    props.dispatch(tokenAction(data.token));
+    props.history.push("/");
+  } catch {
+    alert("Invalid email or password!");
+  }
+};
+
 const mapStateToProps = state => ({
   email: state.email,
   password: state.password

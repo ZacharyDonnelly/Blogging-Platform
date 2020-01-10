@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"sorry no tests\" && exit 1",
-    "start": "nodemon --inspect server.js --exec babel-node"
+    "test": "echo \"LOL, sorry no tests\" && exit 1",
+    "start": "nodemon --exec babel-node server.js"
   },
   "author": "",
   "license": "ISC",

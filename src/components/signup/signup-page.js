@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import axios from "axios";
 
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
@@ -56,11 +57,16 @@ const Signup = props => {
           </div>
         </form>
         <SignupButtonRed />
-        <SignupButtonBlack />
+        <SignupButtonBlack buttonClick={() => handleSubmit(props)} />
       </div>
     </>
   );
 };
+
+const handleSubmit = props => {
+  axios.post("http://localhost:3006/users", { ...props });
+};
+
 const mapStateToProps = state => ({
   email: state.email,
   password: state.password,

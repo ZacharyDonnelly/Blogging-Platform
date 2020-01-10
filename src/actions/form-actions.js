@@ -12,3 +12,8 @@ export const displayAction = (value = "") => ({
   type: "LOGIN_DISPLAY",
   value
 });
+
+export const tokenAction = (value = {}) => ({
+  type: "USER_TOKEN",
+  value
+});

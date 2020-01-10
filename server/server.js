@@ -33,6 +33,15 @@ app.use(
 const server = new ApolloServer({ schema });
 server.applyMiddleware({ app });
 
+//provide a jwt token
+//make post call
+// is res.status === 200
+// Axios.post(url, {body: email,password}){
+//   if(){
+//     history.push('/blog')
+//   }
+// }
+
 const validateAuth = (req, res, next) => {
   const authHeader = req.headers["authorization"];
   if (typeof authHeader === "undefined" && !authHeader.includes("Bearer")) {
@@ -70,19 +79,22 @@ app.post("/users", async ({ body }, res) => {
 });
 
 app.post("/auth", async ({ body }, res) => {
-  const { password: hashedPassword } = await UserSchema.findOne({
-    email: body.email
-  });
-
-  const doesMatch = await bcrypt.compare(body.password, hashedPassword);
-  if (!doesMatch) {
+  try {
+    const { password: hashedPassword } = await UserSchema.findOne({
+      email: body.email
+    });
+    const doesMatch = await bcrypt.compare(body.password, hashedPassword);
+    if (!doesMatch) {
+      res.status(403);
+      res.send({ error: "invalid password" });
+      return;
+    }
+  } catch {
     res.status(403);
-    res.send({ error: "invalid password" });
-    return;
+    res.send({ error: "invalid email or password" });
   }
-
   res.send({
-    token: jwt.sign({ email: body.email, issuer: "dis" }, "changeME"),
+    token: jwt.sign({ email: body.email, issuer: "dis" }, "changeME"), // replace changeme with a secret
     iat: ~~(new Date() / 1000)
   });
 });
