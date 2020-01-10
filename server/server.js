@@ -79,19 +79,22 @@ app.post("/users", async ({ body }, res) => {
 });
 
 app.post("/auth", async ({ body }, res) => {
-  const { password: hashedPassword } = await UserSchema.findOne({
-    email: body.email
-  });
-
-  const doesMatch = await bcrypt.compare(body.password, hashedPassword);
-  if (!doesMatch) {
+  try {
+    const { password: hashedPassword } = await UserSchema.findOne({
+      email: body.email
+    });
+    const doesMatch = await bcrypt.compare(body.password, hashedPassword);
+    if (!doesMatch) {
+      res.status(403);
+      res.send({ error: "invalid password" });
+      return;
+    }
+  } catch {
     res.status(403);
-    res.send({ error: "invalid password" });
-    return;
+    res.send({ error: "invalid email or password" });
   }
-
   res.send({
-    token: jwt.sign({ email: body.email, issuer: "dis" }, "changeME"),
+    token: jwt.sign({ email: body.email, issuer: "dis" }, "changeME"), // replace changeme with a secret
     iat: ~~(new Date() / 1000)
   });
 });
