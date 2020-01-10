@@ -5,6 +5,7 @@ import graphqlHTTP from "express-graphql";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+
 import schema from "./schemas/gqlSchema";
 import { MONGO_URI } from "./config/settings";
 import UserSchema from "./schemas/users";
@@ -32,15 +33,6 @@ app.use(
 );
 const server = new ApolloServer({ schema });
 server.applyMiddleware({ app });
-
-//provide a jwt token
-//make post call
-// is res.status === 200
-// Axios.post(url, {body: email,password}){
-//   if(){
-//     history.push('/blog')
-//   }
-// }
 
 const validateAuth = (req, res, next) => {
   const authHeader = req.headers["authorization"];

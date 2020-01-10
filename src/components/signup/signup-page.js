@@ -65,6 +65,7 @@ const Signup = props => {
 
 const handleSubmit = props => {
   axios.post("http://localhost:3006/users", { ...props });
+  props.history.push("/blog");
 };
 
 const mapStateToProps = state => ({
