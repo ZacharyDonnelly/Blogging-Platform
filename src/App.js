@@ -3,11 +3,12 @@ import { Route, BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import HomePage from "./components/homepage/homepage";
-import BlogMain from "./components/blog-main/blog-main";
+import BlogLanding from "./components/blog-landing/blog-landing";
 import Login from "./components/login/login-page";
 import Signup from "./components/signup/signup-page";
 
 import configureStore from "./store/configureStore";
+import ProfilePage from "./components/profile/profile-page";
 
 const store = configureStore();
 
@@ -15,9 +16,10 @@ const App = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Route path="/" exact component={HomePage} />
-      <Route path="/blog" exact component={BlogMain} />
+      <Route path="/blog" exact component={BlogLanding} />
       <Route path="/login" exact component={Login} />
       <Route path="/signup" exact component={Signup} />
+      <Route path="/profile" exact component={ProfilePage} />
     </BrowserRouter>
   </Provider>
 );
