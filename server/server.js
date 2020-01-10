@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import schema from "./schemas/gqlSchema";
-import { MONGO_URI } from "./settings";
+import { MONGO_URI } from "./config/settings";
 import UserSchema from "./schemas/users";
 
 const app = express();
