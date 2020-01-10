@@ -4,13 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"LOL, sorry no tests\" && exit 1",
     "start": "nodemon --exec babel-node server.js"
-=======
-    "test": "echo \"sorry no tests\" && exit 1",
-    "start": "nodemon server.js --exec babel-node"
->>>>>>> feat-backend
   },
   "author": "",
   "license": "ISC",
