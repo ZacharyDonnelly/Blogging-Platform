@@ -8,7 +8,6 @@ import jwt from "jsonwebtoken";
 import schema from "./schemas/gqlSchema";
 import { MONGO_URI } from "./config/settings";
 import UserSchema from "./schemas/users";
-import Axios from "axios";
 
 const app = express();
 mongoose.connect(MONGO_URI, { useNewUrlParser: true });
@@ -34,6 +33,7 @@ app.use(
 const server = new ApolloServer({ schema });
 server.applyMiddleware({ app });
 
+<<<<<<< HEAD
 //provide a jwt token
 //make post call
 // is res.status === 200
@@ -45,6 +45,9 @@ server.applyMiddleware({ app });
 
 const validateAuth = (req, res, next) => {
   // expecting an authorization header
+=======
+const validateAuth = (req, res, next) => {
+>>>>>>> feat-backend
   const authHeader = req.headers["authorization"];
   if (typeof authHeader === "undefined" && !authHeader.includes("Bearer")) {
     res.status(403);
