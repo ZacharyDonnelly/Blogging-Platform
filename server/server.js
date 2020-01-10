@@ -1,6 +1,4 @@
 import express from "express";
-import dotenv from "dotenv";
-dotenv.config();
 import cors from "cors";
 import { ApolloServer } from "apollo-server-express";
 import graphqlHTTP from "express-graphql";
