@@ -1,20 +1,18 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 import cors from "cors";
 import { ApolloServer } from "apollo-server-express";
 import graphqlHTTP from "express-graphql";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
-import schema from "./schema";
-
-import settings from "./settings";
-
+import schema from "./schemas/gqlSchema";
+import { MONGO_URI } from "./settings";
 import UserSchema from "./schemas/users";
 
 const app = express();
-
-mongoose.connect(settings.uri, { useNewUrlParser: true });
+mongoose.connect(MONGO_URI, { useNewUrlParser: true });
 
 app.use(express.urlencoded());
 app.use(express.json());
@@ -70,6 +68,7 @@ app.post("/users", async ({ body }, res) => {
   });
 
   res.status(200);
+  res.send({ created: "success" });
 });
 
 app.post("/auth", async ({ body }, res) => {
