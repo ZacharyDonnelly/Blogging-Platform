@@ -81,7 +81,7 @@ app.post("/auth", async ({ body }, res) => {
       res.send({ error: "invalid password" });
       return;
     }
-  } catch {
+  } catch (err) {
     res.status(403);
     res.send({ error: "invalid email or password" });
   }
