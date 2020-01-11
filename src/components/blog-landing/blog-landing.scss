@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Work+Sans");
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /****VARIABLES*******/
 $font-size: 1.4rem;
 $font-weight: 400;
@@ -11,6 +17,7 @@ $li-margin: 13px;
 $color-white: #fff;
 $color-lighter-black: #333;
 $max-width: 100%;
+$max-width-125: 125%;
 
 /**NAVBAR STYLES**/
 
@@ -68,16 +75,24 @@ $max-width: 100%;
 
 /**IMAGE STYLES**/
 
+.container {
+  background: lighten($color: #333, $amount: 10%) center;
+  max-width: $max-width-125;
+}
+
 .wrapper {
   overflow: hidden;
   text-align: $text-align;
   vertical-align: middle;
-  max-width: $max-width;
-  border: 0;
+  max-width: $max-width-125;
+  position: absolute;
+  top: 2.3%;
 }
 
 .top-img {
-  min-width: 80%;
-  left: 75%;
+  width: 111vh;
+  top: 1%;
+  left: 34%;
+  text-align: $text-align;
   position: relative;
 }
