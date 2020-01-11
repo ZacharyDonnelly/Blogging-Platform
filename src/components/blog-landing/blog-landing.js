@@ -3,6 +3,7 @@ import "./blog-landing.scss";
 
 // FIND FONTS
 // POSSIBLY USE FLEX-GRID OR SIMPLY GRID
+import React from 'react';
 
 const BlogMain = () => {
   return (
