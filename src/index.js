@@ -1,13 +1,12 @@
+/* eslint-disable no-undef */
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import App from "./App";
 import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById("main"));
+render(<App />, document.getElementById("main"));
 
-// eslint-disable-next-line no-undef
+// enables hot module replacement if plugin is installed
 if (module.hot) {
-  // enables hot module replacement if plugin is installed
-  // eslint-disable-next-line no-undef
   module.hot.accept();
 }

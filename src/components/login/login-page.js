@@ -63,8 +63,9 @@ const handleClick = async props => {
     });
     props.dispatch(tokenAction(data.token));
     props.history.push("/");
-  } catch {
+  } catch (err) {
     alert("Invalid email or password!");
+    console.log(err);
   }
 };
 
