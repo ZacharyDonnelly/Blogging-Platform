@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Work+Sans");
+
+/****VARIABLES*******/
+$font-size: 1.4rem;
+$font-weight: 400;
+$font-family-WorkSans: "Work Sans", sans-serif;
+$display-style: flex;
+$list-style: none;
+$li-margin: 13px;
+$color-white: #fff;
+$color-lighter-black: #333;
+$max-width: 100%;
+
+/**NAVBAR STYLES**/
+
+.blog-nav {
+  height: 62.5px;
+  background: $color-lighter-black;
+  max-width: $max-width;
+}
+
+.blog-list-left {
+  color: $color-white;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  list-style: $list-style;
+  display: $display-style;
+  float: left;
+
+  .blog-item {
+    margin: $li-margin;
+    font-family: $font-family-WorkSans;
+  }
+}
+
+.blog-list-right {
+  color: $color-white;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  list-style: $list-style;
+  display: $display-style;
+  float: right;
+
+  .blog-item {
+    margin: $li-margin;
+    font-family: $font-family-WorkSans;
+  }
+}
+.nav-center {
+  position: absolute;
+  font-family: "Lato";
+  font-size: 1.9rem;
+  color: white;
+  left: -75px;
+  right: 0;
+  top: 7.55px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/**IMAGE STYLES**/
+
+.wrapper {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  max-width: $max-width;
+  border: 0;
+}
+
+.top-img {
+  min-width: 80%;
+  left: 75%;
+  position: relative;
+}
