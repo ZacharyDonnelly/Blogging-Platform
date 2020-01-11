@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: "eslint:recommended",
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
@@ -16,7 +16,5 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["react"],
-  rules: {
-    "no-unused-vars": "off"
-  }
+  rules: { "react/prop-types": 0 }
 };
