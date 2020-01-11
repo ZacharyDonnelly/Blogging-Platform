@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Work+Sans");
 
+// body,
+// html,
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
 /****VARIABLES*******/
 $font-size: 1.4rem;
 $font-weight: 400;
@@ -11,14 +19,20 @@ $li-margin: 13px;
 $color-white: #fff;
 $color-lighter-black: #333;
 $max-width: 100%;
+$max-width-125: 125%;
+$absolute: absolute;
+
+.outter-div {
+  background: $color-lighter-black;
+}
 
 /**NAVBAR STYLES**/
 
 .blog-nav {
-  height: 62.5px;
+  height: 20px;
+  padding-bottom: 15px;
   background: $color-lighter-black;
   max-width: $max-width;
-  z-index: 0;
 }
 
 .blog-list-left {
@@ -27,7 +41,19 @@ $max-width: 100%;
   font-size: $font-size;
   list-style: $list-style;
   display: $display-style;
-  float: left;
+  position: $absolute;
+  left: 1.6%;
+}
+.nav-center {
+  position: $absolute;
+  font-family: "Lato";
+  font-size: 1.9rem;
+  color: $color-white;
+  left: -75px;
+  right: 0;
+  top: 5px;
+  font-weight: $font-weight;
+  text-align: $text-align;
 }
 
 .blog-list-right {
@@ -36,23 +62,13 @@ $max-width: 100%;
   font-size: $font-size;
   list-style: $list-style;
   display: $display-style;
-  float: right;
-}
-.nav-center {
-  position: absolute;
-  font-family: "Lato";
-  font-size: 1.9rem;
-  color: $color-white;
-  left: -75px;
-  right: 0;
-  top: 7.5px;
-  font-weight: $font-weight;
-  text-align: $text-align;
+  position: $absolute;
+  right: 2.87%;
 }
 
 .blog-link {
   font-family: $font-family-WorkSans;
-  text-decoration: none;
+  text-decoration: $list-style;
   font-size: 1.45rem;
   cursor: pointer;
   color: $color-white;
@@ -60,24 +76,16 @@ $max-width: 100%;
   margin: 13px 30px 0 30px;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /**IMAGE STYLES**/
 
 .wrapper {
-  overflow: hidden;
   text-align: $text-align;
   vertical-align: middle;
-  max-width: $max-width;
-  border: 0;
-}
-
-.top-img {
-  min-width: 80%;
-  left: 75%;
+  max-width: $max-width-125;
   position: relative;
+  top: 2.3%;
+}
+.top-img {
+  background: center;
+  width: 350%;
 }
