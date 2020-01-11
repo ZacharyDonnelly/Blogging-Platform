@@ -6,7 +6,7 @@ import "./blog-landing.scss";
 
 const BlogMain = () => {
   return (
-    <>
+    <div className="outter-div">
       <div className="nav-div">
         <nav className="blog-nav">
           <ul className="blog-list-left">
@@ -27,7 +27,12 @@ const BlogMain = () => {
       <div className="wrapper">
         <img className="top-img" src={photo} alt="Laptop and Coffee" />
       </div>
-    </>
+      <div className="side-container">
+        <div className="blog-sidebar">
+          <h2 className="sidebar-left-header"></h2>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -7,5 +7,10 @@
         "graphiql",
         "polyfill",
         "readonly"
+    ],
+    "cSpell.ignoreWords": [
+        "artboard",
+        "div",
+        "outter"
     ]
 }
