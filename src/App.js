@@ -1,19 +1,19 @@
 import React from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
 
 import HomePage from "./components/homepage/homepage";
 import BlogLanding from "./components/blog-landing/blog-landing";
 import Login from "./components/login/login-page";
 import Signup from "./components/signup/signup-page";
+import ProfilePage from "./components/profile/profile-page";
 
 import configureStore from "./store/configureStore";
-import ProfilePage from "./components/profile/profile-page";
-import { ApolloProvider } from "react-apollo";
-import ApolloClient from "apollo-boost";
+const store = configureStore();
 
 const client = new ApolloClient({ uri: "http://localhost:3006/graphql" });
-const store = configureStore();
 
 const App = () => (
   <Provider store={store}>
