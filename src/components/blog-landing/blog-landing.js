@@ -1,9 +1,7 @@
 import React from "react";
-import "./blog-landing.scss";
+import { Link } from "react-router-dom";
 
-// FIND FONTS
-// POSSIBLY USE FLEX-GRID OR SIMPLY GRID
-import React from 'react';
+import "./blog-landing.scss";
 
 const BlogMain = () => {
   return (
@@ -11,13 +9,15 @@ const BlogMain = () => {
       <div className="nav-div">
         <nav className="blog-nav">
           <ul className="blog-list-left">
-            <li className="blog-item">Home</li>
+            <Link to="/" className="blog-link">
+              Home
+            </Link>
           </ul>
           <div className="clearfix">
             <ul className="blog-list-right">
-              <li className="blog-item" id="right-side">
+              <Link to="/profile" className="blog-link">
                 Profile
-              </li>
+              </Link>
             </ul>
           </div>
         </nav>
