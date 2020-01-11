@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Work+Sans");
+
 /****VARIABLES*******/
 $font-size: 1.4rem;
 $font-weight: 400;
+$font-family-WorkSans: "Work Sans", sans-serif;
 $display-style: flex;
 $list-style: none;
 $li-margin: 13px;
@@ -26,6 +29,7 @@ $max-width: 100%;
 
   .blog-item {
     margin: $li-margin;
+    font-family: $font-family-WorkSans;
   }
 }
 
@@ -39,7 +43,19 @@ $max-width: 100%;
 
   .blog-item {
     margin: $li-margin;
+    font-family: $font-family-WorkSans;
   }
+}
+.nav-center {
+  position: absolute;
+  font-family: "Lato";
+  font-size: 1.9rem;
+  color: white;
+  left: -75px;
+  right: 0;
+  top: 7.55px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .clearfix::after {

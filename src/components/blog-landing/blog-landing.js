@@ -1,6 +1,9 @@
 import React from "react";
 import "./blog-landing.scss";
 
+// FIND FONTS
+// POSSIBLY USE FLEX-GRID OR SIMPLY GRID
+
 const BlogMain = () => {
   return (
     <>
@@ -17,6 +20,7 @@ const BlogMain = () => {
             </ul>
           </div>
         </nav>
+        <h2 className="nav-center">Bloggr</h2>
       </div>
       <div className="wrapper">
         <img
