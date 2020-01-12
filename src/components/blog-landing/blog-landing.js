@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 import photo from "../../../public/assets/PS-Blog.png";
+
 import "./blog-landing.scss";
 
 const BlogLanding = () => {
@@ -34,6 +36,12 @@ const BlogLanding = () => {
               dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
               eligendi incidunt corrupti ducimus illum magni.
             </p>
+          <div className="clearfix">
+            <ul className="blog-list-right">
+              <Link to="/profile" className="blog-link">
+                Profile
+              </Link>
+            </ul>
           </div>
         </div>
         <img src={photo} className="blog-img"></img>
