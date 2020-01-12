@@ -23,7 +23,6 @@ const Signup = props => {
         <span>Sign up with your email and password</span>
         <form className="sign-up-form">
           <div className="group">
-            Display Name
             <input
               className="form-input"
               type="text"
@@ -32,9 +31,9 @@ const Signup = props => {
               onChange={e => props.dispatch(displayAction(e.target.value))}
               required
             />
+            <label className="form-input-label">Display Name</label>
           </div>
           <div className="group">
-            Email
             <input
               className="form-input"
               type="text"
@@ -46,7 +45,6 @@ const Signup = props => {
             <label className="form-input-label">Email</label>
           </div>
           <div className="group">
-            Password
             <input
               className="form-input"
               type="password"
