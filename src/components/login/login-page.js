@@ -25,7 +25,6 @@ const Login = props => {
 
         <form>
           <div className="group">
-            Email
             <input
               className="form-input"
               type="text"
@@ -34,9 +33,9 @@ const Login = props => {
               onChange={e => props.dispatch(emailAction(e.target.value))}
               required
             />
+            <label className="form-input-label">Email</label>
           </div>
           <div className="group">
-            Password
             <input
               className="form-input"
               type="password"
