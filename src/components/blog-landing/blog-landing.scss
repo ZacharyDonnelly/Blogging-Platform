@@ -20,17 +20,40 @@ $color-white: #fff;
 $color-lighter-black: #333;
 $max-width: 100%;
 $max-width-125: 125%;
-$absolute: absolute;
 
-.outter-div {
-  background: $color-lighter-black;
+.full {
+  height: 89vh;
+}
+
+.blog-wrapper {
+  z-index: 0;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 106.5%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px 100px;
+  -ms-grid-columns: 1fr 100px 1fr 100px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 80px 10px 1fr 10px 80px;
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+    "....... header  ......."
+    "sidebar content content"
+    "sidebar  footer  footer";
+}
+
+.blog-container {
+  text-align: $text-align;
+  max-width: $max-width-125;
+  top: 2.3%;
 }
 
 /**NAVBAR STYLES**/
 
 .blog-nav {
-  height: 20px;
-  padding-bottom: 15px;
+  height: 75px;
   background: $color-lighter-black;
   max-width: $max-width;
 }
@@ -41,15 +64,16 @@ $absolute: absolute;
   font-size: $font-size;
   list-style: $list-style;
   display: $display-style;
-  position: $absolute;
+  position: absolute;
   left: 1.6%;
 }
 .nav-center {
-  position: $absolute;
+  position: absolute;
+  grid-area: midHeader;
   font-family: "Lato";
   font-size: 1.9rem;
   color: $color-white;
-  left: -75px;
+  left: -1px;
   right: 0;
   top: 5px;
   font-weight: $font-weight;
@@ -62,8 +86,18 @@ $absolute: absolute;
   font-size: $font-size;
   list-style: $list-style;
   display: $display-style;
-  position: $absolute;
+  position: absolute;
   right: 2.87%;
+}
+
+.sidebar-container {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  grid-area: sidebar;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
 .blog-link {
@@ -76,16 +110,29 @@ $absolute: absolute;
   margin: 13px 30px 0 30px;
 }
 
+.sidebar-header {
+  color: $color-lighter-black;
+  grid-area: sidebar;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.sidebar-text {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  z-index: 80;
+  grid-area: sidebar;
+  color: $color-lighter-black;
+}
+
 /**IMAGE STYLES**/
 
-.wrapper {
-  text-align: $text-align;
-  vertical-align: middle;
-  max-width: $max-width-125;
-  position: relative;
-  top: 2.3%;
-}
-.top-img {
-  background: center;
-  width: 350%;
+.blog-img {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  height: 800px;
+  background: url(../../../public/assets/PS-Blog.png) center center no-repeat;
+  background-size: cover;
+  z-index: 200;
 }

@@ -33,13 +33,17 @@ $snowGray: hsl(0, 4%, 55%);
 
 .sidebar {
   -ms-grid-row: 3;
+  grid-row: 3;
   -ms-grid-column: 1;
+  grid-column: 1;
   grid-area: sidebar;
 }
 
 .content {
   -ms-grid-row: 3;
+  grid-row: 3;
   -ms-grid-column: 3;
+  grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: content;
   background: url(https://images.unsplash.com/photo-1573554394544-930a4cf6fc66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)
@@ -49,7 +53,9 @@ $snowGray: hsl(0, 4%, 55%);
 
 .header {
   -ms-grid-row: 1;
+  grid-row: 1;
   -ms-grid-column: 3;
+  grid-column: 3;
   -ms-grid-column-span: 3;
   color: black;
   position: relative;
