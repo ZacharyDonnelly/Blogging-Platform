@@ -43,7 +43,3 @@ const BlogLanding = () => {
 };
 
 export default BlogLanding;
-<<<<<<< HEAD
-=======
-
->>>>>>> 0b1c37ea8d279d0701d5fb5393fca07d1b7c0482
