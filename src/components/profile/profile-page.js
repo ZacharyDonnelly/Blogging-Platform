@@ -1,9 +1,13 @@
 import React from "react";
+import { Pie } from "react-chartjs-2";
+import { data } from "./mock-data";
+
+import "./profile-page.scss";
 
 const ProfilePage = () => {
   return (
-    <div>
-      <h1>profile page</h1>
+    <div className="profile-main">
+      <Pie data={data} className="profile-pie" />
     </div>
   );
 };
