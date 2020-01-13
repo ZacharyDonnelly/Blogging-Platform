@@ -64,6 +64,7 @@ $max-width-125: 125%;
   grid-area: midHeader;
   font-family: "Lato";
   font-size: 1.9rem;
+  margin-top: 10px;
   color: $color-white;
   left: -1px;
   right: 0;
@@ -99,7 +100,7 @@ $max-width-125: 125%;
   cursor: pointer;
   color: $color-white;
   z-index: 100;
-  margin: 13px 30px 0 30px;
+  margin: 18px 30px 0 30px;
 }
 
 .sidebar-header {
@@ -115,6 +116,13 @@ $max-width-125: 125%;
   z-index: 80;
   grid-area: sidebar;
   color: $color-lighter-black;
+}
+
+.blog-avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $color-white;
 }
 
 /**IMAGE STYLES**/
