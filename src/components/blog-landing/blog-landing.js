@@ -18,7 +18,7 @@ const BlogLanding = props => {
           </ul>
           <ul className="blog-list-right">
             <Link to="/profile" className="blog-link">
-              {props.email}
+              {!props.email ? "Profile" : props.email}
             </Link>
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />
