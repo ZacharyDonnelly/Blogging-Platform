@@ -64,19 +64,28 @@ const Signup = props => {
 };
 
 const handleSubmit = props => {
-  const verification = axios
-    .get(
-      "http://localhost:3006/verify",
-      JSON.stringify({ display: props.display, email: props.email })
-    )
-    .then(res => alert(`${res} is taken!`));
-  if (verification) {
-    alert("Username or email taken");
-  } else {
-    axios.post("http://localhost:3006/users", { ...props });
-    localStorage.setItem("creds", JSON.stringify({ ...props }));
-    props.history.push("/blog");
-  }
+  axios
+    .post("http://localhost:3006/verify", {
+      display: props.display,
+      email: props.email
+    })
+    .then(res => {
+      const data = JSON.parse(JSON.stringify(res.data));
+      data.forEach(x => {
+        if (x.email === props.email) {
+          alert("Email is taken");
+          return;
+        } else if (x.display === props.display) {
+          alert("Display Name is taken");
+          return;
+        }
+      });
+    });
+  // } else {
+  //   axios.post("http://localhost:3006/users", { ...props });
+  //   localStorage.setItem("creds", JSON.stringify({ ...props }));
+  //   props.history.push("/blog");
+  // }
 };
 
 const mapStateToProps = state => ({
@@ -86,3 +95,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(Signup);
+
