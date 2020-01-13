@@ -16,8 +16,8 @@ const store = configureStore();
 const client = new ApolloClient({ uri: "http://localhost:3006/graphql" });
 
 const App = () => (
-  <Provider store={store}>
-    <ApolloProvider client={client}>
+  <ApolloProvider client={client}>
+    <Provider store={store}>
       <BrowserRouter>
         <Route path="/" exact component={HomePage} />
         <Route path="/blog" exact component={BlogLanding} />
@@ -25,8 +25,8 @@ const App = () => (
         <Route path="/signup" exact component={Signup} />
         <Route path="/profile" exact component={ProfilePage} />
       </BrowserRouter>
-    </ApolloProvider>
-  </Provider>
+    </Provider>
+  </ApolloProvider>
 );
 
 export default App;

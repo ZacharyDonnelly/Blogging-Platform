@@ -62,7 +62,8 @@ const handleClick = async props => {
       ...props
     });
     props.dispatch(tokenAction(data.token));
-    props.history.push("/");
+    localStorage.setItem("creds", JSON.stringify(data));
+    props.history.push("/blog");
   } catch (err) {
     alert("Invalid email or password!");
     console.log(err);
