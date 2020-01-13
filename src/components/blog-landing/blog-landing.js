@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Avatar } from "antd";
 
 import photo from "../../../public/assets/PS-Blog.png";
 import "./blog-landing.scss";
@@ -19,6 +20,7 @@ const BlogLanding = () => {
               Profile
             </Link>
           </ul>
+          <Avatar size={64} icon="user" className="blog-avatar" />
         </div>
       </nav>
       <h2 className="nav-center">Bloggr</h2>
@@ -26,6 +28,24 @@ const BlogLanding = () => {
         <div className="blog-container">
           <div className="sidebar-container">
             <h2 className="sidebar-header">Header</h2>
+            <p className="sidebar-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+              impedit commodi excepturi nulla aliquam quia autem vero ut.
+              Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
+              cupiditate nostrum, reprehenderit et consectetur. Est earum
+              dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
+              eligendi incidunt corrupti ducimus illum magni.
+            </p>
+            <br />
+            <p className="sidebar-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+              impedit commodi excepturi nulla aliquam quia autem vero ut.
+              Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
+              cupiditate nostrum, reprehenderit et consectetur. Est earum
+              dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
+              eligendi incidunt corrupti ducimus illum magni.
+            </p>
+            <br />
             <p className="sidebar-text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
               impedit commodi excepturi nulla aliquam quia autem vero ut.
@@ -43,4 +63,3 @@ const BlogLanding = () => {
 };
 
 export default BlogLanding;
-
