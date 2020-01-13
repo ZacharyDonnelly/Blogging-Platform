@@ -60,6 +60,13 @@ app.get("/thing", validateAuth, (req, res) => {
   res.send("Working!!");
 });
 
+app.get("/verify", async ({ display, email }, res) => {
+  await UserSchema.findOne({ display });
+  await UserSchema.findOne({ email });
+
+  return;
+});
+
 app.post("/users", async ({ body }, res) => {
   bcrypt.hash(body.password, 10, async (err, hash) => {
     const user = new UserSchema({ ...body, password: hash });

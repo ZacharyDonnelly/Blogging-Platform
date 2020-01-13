@@ -64,8 +64,19 @@ const Signup = props => {
 };
 
 const handleSubmit = props => {
-  axios.post("http://localhost:3006/users", { ...props });
-  props.history.push("/blog");
+  const verification = axios
+    .get(
+      "http://localhost:3006/verify",
+      JSON.stringify({ display: props.display, email: props.email })
+    )
+    .then(res => alert(`${res} is taken!`));
+  if (verification) {
+    alert("Username or email taken");
+  } else {
+    axios.post("http://localhost:3006/users", { ...props });
+    localStorage.setItem("creds", JSON.stringify({ ...props }));
+    props.history.push("/blog");
+  }
 };
 
 const mapStateToProps = state => ({

@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
+import { connect } from "react-redux";
 
 import photo from "../../../public/assets/PS-Blog.png";
 import "./blog-landing.scss";
 
-const BlogLanding = () => {
+const BlogLanding = props => {
   return (
     <div className="full">
       <nav className="blog-nav">
@@ -17,7 +18,7 @@ const BlogLanding = () => {
           </ul>
           <ul className="blog-list-right">
             <Link to="/profile" className="blog-link">
-              Profile
+              {props.email}
             </Link>
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />
@@ -62,4 +63,11 @@ const BlogLanding = () => {
   );
 };
 
-export default BlogLanding;
+BlogLanding.defaultProps = {
+  email: "Profile"
+};
+const mapStateToProps = state => ({
+  email: state.email
+});
+
+export default connect(mapStateToProps)(BlogLanding);
