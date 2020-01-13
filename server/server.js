@@ -5,10 +5,9 @@ import graphqlHTTP from "express-graphql";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
 import schema from "./schemas/gqlSchema";
 import { MONGO_URI } from "./config/settings";
-import UserSchema from "./schemas/users";
+import userSchema from "./schemas/users";
 
 const app = express();
 mongoose.connect(MONGO_URI, { useNewUrlParser: true });
@@ -60,16 +59,18 @@ app.get("/thing", validateAuth, (req, res) => {
   res.send("Working!!");
 });
 
-app.get("/verify", async ({ display, email }, res) => {
-  await UserSchema.findOne({ display });
-  await UserSchema.findOne({ email });
-
-  return;
+app.post("/verify", async ({ display, email }, res) => {
+  mongoose
+    .model("User")
+    .find((err, users) => {
+      res.send(users);
+    })
+    .catch(err => console.log(err));
 });
 
 app.post("/users", async ({ body }, res) => {
   bcrypt.hash(body.password, 10, async (err, hash) => {
-    const user = new UserSchema({ ...body, password: hash });
+    const user = new userSchema({ ...body, password: hash });
     await user.save();
   });
 
@@ -79,7 +80,7 @@ app.post("/users", async ({ body }, res) => {
 
 app.post("/auth", async ({ body }, res) => {
   try {
-    const { password: hashedPassword } = await UserSchema.findOne({
+    const { password: hashedPassword } = await userSchema.findOne({
       email: body.email
     });
     const doesMatch = await bcrypt.compare(body.password, hashedPassword);
