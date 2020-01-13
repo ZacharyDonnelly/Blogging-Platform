@@ -59,13 +59,22 @@ app.get("/thing", validateAuth, (req, res) => {
   res.send("Working!!");
 });
 
-app.post("/verify", async ({ display, email }, res) => {
-  mongoose
-    .model("User")
-    .find((err, users) => {
-      res.send(users);
-    })
-    .catch(err => console.log(err));
+app.post("/verify", async ({ body }, res) => {
+  try {
+    await mongoose.model("User").find(async (err, users) => {
+      users.forEach(x => {
+        if (x.display === body.display || x.email === body.email) {
+          res.status(405);
+          res.send({ user: "Display Name or Email taken" });
+          return;
+        }
+      });
+      res.status(200);
+      res.send("no user");
+    });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 app.post("/users", async ({ body }, res) => {
