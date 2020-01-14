@@ -9,7 +9,7 @@ $display-style: flex;
 $list-style: none;
 $li-margin: 13px;
 $color-white: #fff;
-$color-lighter-black: #333;
+$color-lighter-black: rgba(0, 0, 0, 0.84);
 $max-width: 100%;
 $max-width-125: 125%;
 
@@ -38,7 +38,6 @@ $max-width-125: 125%;
   top: 2.3%;
 }
 
-
 .sidebar-header {
   color: $color-lighter-black;
   grid-area: sidebar;
@@ -54,7 +53,6 @@ $max-width-125: 125%;
   color: $color-lighter-black;
 }
 
-
 /**IMAGE STYLES**/
 
 .blog-img {
@@ -64,5 +62,5 @@ $max-width-125: 125%;
   height: 800px;
   background: url(../../../public/assets/PS-Blog.png) center center no-repeat;
   background-size: cover;
-  z-index: 200;
+  z-index: 2;
 }

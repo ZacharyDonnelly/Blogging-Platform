@@ -48,6 +48,15 @@ const BlogTop = () => {
               dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
               eligendi incidunt corrupti ducimus illum magni.
             </p>
+            <br />
+            <p className="sidebar-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+              impedit commodi excepturi nulla aliquam quia autem vero ut.
+              Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
+              cupiditate nostrum, reprehenderit et consectetur. Est earum
+              dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
+              eligendi incidunt corrupti ducimus illum magni.
+            </p>
           </div>
         </div>
         <img src={photo} className="blog-img"></img>
