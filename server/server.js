@@ -59,22 +59,37 @@ app.get("/thing", validateAuth, (req, res) => {
   res.send("Working!!");
 });
 
+// try {
+//   await mongoose.model("User").find(async (err, users) => {
+//     users.forEach(x => {
+//       if (x.display === body.display || x.email === body.email) {
+//         res.status(405);
+//         res.send({ user: "Display Name or Email taken" });
+//         return;
+//       }
+//     });
+//     res.status(200);
+//     res.send("no user");
+//   });
+//  }
 app.post("/verify", async ({ body }, res) => {
   try {
-    await mongoose.model("User").find(async (err, users) => {
-      users.forEach(x => {
-        if (x.display === body.display || x.email === body.email) {
-          res.status(405);
-          res.send({ user: "Display Name or Email taken" });
-          return;
-        }
-      });
-      res.status(200);
-      res.send("no user");
+    const emailTaken = await userSchema.findOne({
+      email: body.email
     });
+    const displayTaken = await userSchema.findOne({
+      display: body.display
+    });
+    if (emailTaken !== null || displayTaken !== null) {
+      res.status(403);
+      res.send("Username or Email taken");
+      return;
+    }
   } catch (err) {
     console.log(err);
   }
+  res.status(200);
+  res.send("No Match");
 });
 
 app.post("/users", async ({ body }, res) => {
@@ -111,3 +126,4 @@ app.post("/auth", async ({ body }, res) => {
 app.listen({ port: 3006 }, () =>
   console.log("Now browse to http://localhost:3006" + server.graphqlPath)
 );
+
