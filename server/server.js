@@ -126,3 +126,4 @@ app.post("/auth", async ({ body }, res) => {
 app.listen({ port: 3006 }, () =>
   console.log("Now browse to http://localhost:3006" + server.graphqlPath)
 );
+
