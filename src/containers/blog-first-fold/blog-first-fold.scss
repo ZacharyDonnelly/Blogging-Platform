@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Work+Sans");
+
+/****VARIABLES*******/
+$font-size: 1.4rem;
+$font-weight: 400;
+$text-align: center;
+$font-family-WorkSans: "Work Sans", sans-serif;
+$display-style: flex;
+$list-style: none;
+$li-margin: 13px;
+$color-white: #fff;
+$color-lighter-black: #333;
+$max-width: 100%;
+$max-width-125: 125%;
+
+.blog-wrapper {
+  z-index: 0;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 102%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px 100px;
+  -ms-grid-columns: 1fr 100px 1fr 100px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 80px 10px 1fr 10px 80px;
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+    "....... header  ......."
+    "sidebar content content"
+    "sidebar  footer  footer";
+}
+
+.blog-container {
+  text-align: $text-align;
+  max-width: $max-width-125;
+  top: 2.3%;
+}
+
+
+.sidebar-header {
+  color: $color-lighter-black;
+  grid-area: sidebar;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.sidebar-text {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  z-index: 80;
+  grid-area: sidebar;
+  color: $color-lighter-black;
+}
+
+
+/**IMAGE STYLES**/
+
+.blog-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 800px;
+  background: url(../../../public/assets/PS-Blog.png) center center no-repeat;
+  background-size: cover;
+  z-index: 200;
+}
