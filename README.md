@@ -21,3 +21,14 @@ npm install
 
 
 My developer blog built on: Custom Webpack/babel config(No CRA), ReactJS/Hooks(for refs)/Redux, NodeJS/Express, JWT/bcrypt for user auth, MongoDB/Mongoose for storage, NextJS, SCSS, GraphQL, & Apollo
+
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
