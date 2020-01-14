@@ -21,7 +21,7 @@ const Signup = props => {
       <div className="sign-up">
         <h2 className="title">I do not have an account</h2>
         <span>Sign up with your email and password</span>
-        <form className="sign-up-form">
+        <form className="sign-up-form" onSubmit={() => handleSubmit(props)}>
           <div className="group">
             <input
               className="form-input"
@@ -68,14 +68,14 @@ const handleSubmit = async props => {
     const { data } = await axios.post("http://localhost:3006/verify", {
       ...props
     });
-    alert(JSON.stringify(data));
-    if (data === "no user") {
+    if (data === "No Match") {
       axios.post("http://localhost:3006/users", { ...props });
       localStorage.setItem("creds", JSON.stringify({ ...props }));
       props.history.push("/blog");
     }
   } catch (err) {
     console.error(err);
+    alert("Email or Username already in use");
   }
 };
 

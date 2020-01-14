@@ -51,6 +51,14 @@ const HomePage = () => {
           molestie nunc non blandit massa enim nec. Faucibus et molestie ac
           feugiat sed lectus. Gravida rutrum quisque non tellus orci ac.
         </p>
+        <p className="homepage-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis
+          donec et odio pellentesque diam volutpat. Sed egestas egestas
+          fringilla phasellus faucibus. Amet tellus cras adipiscing enim. Tellus
+          molestie nunc non blandit massa enim nec. Faucibus et molestie ac
+          feugiat sed lectus. Gravida rutrum quisque non tellus orci ac.
+        </p>
       </div>
       <div className="box content"></div>
     </div>
