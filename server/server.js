@@ -59,20 +59,20 @@ app.get("/thing", validateAuth, (req, res) => {
   res.send("Working!!");
 });
 
+// try {
+//   await mongoose.model("User").find(async (err, users) => {
+//     users.forEach(x => {
+//       if (x.display === body.display || x.email === body.email) {
+//         res.status(405);
+//         res.send({ user: "Display Name or Email taken" });
+//         return;
+//       }
+//     });
+//     res.status(200);
+//     res.send("no user");
+//   });
+//  }
 app.post("/verify", async ({ body }, res) => {
-  // try {
-  //   await mongoose.model("User").find(async (err, users) => {
-  //     users.forEach(x => {
-  //       if (x.display === body.display || x.email === body.email) {
-  //         res.status(405);
-  //         res.send({ user: "Display Name or Email taken" });
-  //         return;
-  //       }
-  //     });
-  //     res.status(200);
-  //     res.send("no user");
-  //   });
-  //  }
   try {
     const emailTaken = await userSchema.findOne({
       email: body.email
