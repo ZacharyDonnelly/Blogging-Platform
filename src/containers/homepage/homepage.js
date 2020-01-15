@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../../../theme";
-import { GlobalStyles } from "../../../global";
+import { lightTheme, darkTheme } from "../../SC-Theme/theme";
+import { GlobalStyles } from "../../SC-Theme/global";
 import Toggle from "../../components/toggle/toggle";
 
 import "./homepage.scss";

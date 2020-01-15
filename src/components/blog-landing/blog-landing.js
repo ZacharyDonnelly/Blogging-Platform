@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
-import { lightTheme, darkTheme } from "../../../theme";
-import { GlobalStyles } from "../../../global";
+import { lightTheme, darkTheme } from "../../SC-Theme/theme";
+import { GlobalStyles } from "../../SC-Theme/global";
 
 import BlogNav from "../../containers/blog-landing-nav/blog-landing-nav";
 import BlogTop from "../../containers/blog-first-fold/blog-first-fold";
