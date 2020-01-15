@@ -11,6 +11,11 @@ $color-white: #fff;
 $color-header-black: rgba(0, 0, 0, 0.74);
 $max-width: 100%;
 $max-width-125: 125%;
+$color_checkbox_success: #4cd964;
+$color_checkbox_default: #8e8e93;
+$transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 4em;
+$height: $width/2;
 
 .blog-wrapper {
   z-index: 0;
@@ -62,9 +67,9 @@ $max-width-125: 125%;
 
 .blog-img {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 800px;
+  right: 125px;
+  bottom: 150px;
+  height: 675px;
   background: url(../../../public/assets/PS-Blog.png) center center no-repeat;
   background-size: cover;
   z-index: 2;
@@ -74,6 +79,72 @@ $max-width-125: 125%;
 
 .blog-hr {
   width: 75%;
-  margin: 75px 0 0 200px;
+  margin: 0 0 0 200px;
   color: rgba(0, 0, 0, 0.2);
+}
+
+/**SLIDER**/
+.theme-switch-wrapper {
+  z-index: 50;
+  position: absolute;
+  top: 80px;
+  left: 0;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
 }

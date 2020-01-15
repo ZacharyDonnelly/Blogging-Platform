@@ -1,10 +1,13 @@
-import React from "react";
-
+import React, {useState} from "react";
+import { GlobalStyles } from "../../../global";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../../../theme";
 import "./blog-second-fold.scss";
 
 const BlogMiddle = () => {
   return (
     <div className="middle-fold">
+
       <div className="card-container">
         <div className="card card-one">
           <h2 className="card-header">Card One</h2>
