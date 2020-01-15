@@ -5,16 +5,11 @@ body {
     height: 175vh;
     background: ${({ theme }) => theme.body};
     transition: all 0.25s linear;
-
 }
 
 .blog-wrapper {
   background: ${({ theme }) => theme.body};
   
-}
-
-.middle-fold {
-  background: ${({ theme }) => theme.body};
 }
 
 .sidebar-text {

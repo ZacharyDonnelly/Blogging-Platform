@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import { connect } from "react-redux";
 import { ThemeProvider } from "styled-components";
@@ -12,17 +12,18 @@ import BlogMiddle from "../../containers/blog-second-fold/blog-second-fold";
 import "./blog-landing.scss";
 
 const BlogLanding = () => {
+  // eslint-disable-next-line no-unused-vars
   const [theme, setTheme] = useState("light");
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
     <ThemeProvider theme={themeMode}>
-    <GlobalStyles/>
-    <div className="full">
-      <BlogNav />
-      <BlogTop />
-      <BlogMiddle />
-    </div>
+      <GlobalStyles />
+      <div className="full">
+        <BlogNav />
+        <BlogTop />
+        <BlogMiddle />
+      </div>
     </ThemeProvider>
   );
 };
