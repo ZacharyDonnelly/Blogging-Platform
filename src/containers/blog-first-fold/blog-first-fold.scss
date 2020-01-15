@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto");
 
 /****VARIABLES*******/
-$font-weight: 400;
-$display-style: flex;
 $font-family-header: "Open Sans", sans-serif;
 $font-family-body: "Roboto", sans-serif;
 $list-style: none;
@@ -11,11 +9,7 @@ $color-white: #fff;
 $color-header-black: rgba(0, 0, 0, 0.74);
 $max-width: 100%;
 $max-width-125: 125%;
-$color_checkbox_success: #4cd964;
-$color_checkbox_default: #8e8e93;
 $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-$width: 4em;
-$height: $width/2;
 
 .blog-wrapper {
   z-index: 0;
