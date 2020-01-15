@@ -7,23 +7,23 @@ const HomePage = () => {
   return (
     <div className="wrapper">
       <div className="box header">
-        <ul>
-          <li>
+        <ul className="homepage-list">
+          <li className="homepage-list-item">
             <Link to="/" className="link homepage-link">
               Home
             </Link>
           </li>
-          <li>
+          <li className="homepage-list-item">
             <Link to="/blog" className="link homepage-link">
               Blog
             </Link>
           </li>
-          <li>
+          <li className="homepage-list-item">
             <Link to="/login" className="link homepage-link">
               Login
             </Link>
           </li>
-          <li>
+          <li className="homepage-list-item">
             <Link to="/signup" className="link homepage-link">
               Signup
             </Link>

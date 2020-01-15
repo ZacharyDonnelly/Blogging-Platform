@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Adamina|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Lato|Merriweather:300");
 
 $orange: hsl(30, 77%, 55%);
 $snowGray: hsl(0, 4%, 55%);
+$font-family-header: "Merriweather", serif;
+$font-family-body: "Lato", sans-serif;
 
 .wrapper {
   margin: 40px;
@@ -10,8 +12,8 @@ $snowGray: hsl(0, 4%, 55%);
 }
 
 .homepage-header {
-  font-family: "Adamina", serif;
-  font-weight: normal;
+  font-family: $font-family-header;
+  font-weight: 300;
   margin: 0;
   font-size: 60px;
   letter-spacing: 3px;
@@ -28,6 +30,7 @@ $snowGray: hsl(0, 4%, 55%);
   letter-spacing: 1.3px;
   line-height: 1.3;
   color: $snowGray;
+  font-family: $font-family-body;
   margin: 15px 0;
 }
 
@@ -60,15 +63,16 @@ $snowGray: hsl(0, 4%, 55%);
   color: black;
   position: relative;
   grid-area: header;
-  ul {
+  .homepage-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding-left: 0;
     padding-top: 45px;
-    li {
+    .homepage-list-item {
       list-style: none;
       margin: 0 20px 0 0;
+      font-family: $font-family-header;
     }
   }
 }

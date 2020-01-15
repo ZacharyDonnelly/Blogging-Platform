@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import schema from "./schemas/gqlSchema";
-import { MONGO_URI } from "./config/settings";
+import { MONGO_URI, JWT_SECRET } from "./config/settings";
 import userSchema from "./schemas/users";
 
 const app = express();
@@ -44,7 +44,7 @@ const validateAuth = (req, res, next) => {
   const bearer = authHeader.split("Bearer")[1];
 
   try {
-    const decoded = jwt.verify(bearer.replace(" ", ""), "changeME");
+    const decoded = jwt.verify(bearer.replace(" ", ""), JWT_SECRET);
   } catch (err) {
     res.status(405);
     res.send({ error: "invalid creds" });
@@ -59,19 +59,6 @@ app.get("/thing", validateAuth, (req, res) => {
   res.send("Working!!");
 });
 
-// try {
-//   await mongoose.model("User").find(async (err, users) => {
-//     users.forEach(x => {
-//       if (x.display === body.display || x.email === body.email) {
-//         res.status(405);
-//         res.send({ user: "Display Name or Email taken" });
-//         return;
-//       }
-//     });
-//     res.status(200);
-//     res.send("no user");
-//   });
-//  }
 app.post("/verify", async ({ body }, res) => {
   try {
     const emailTaken = await userSchema.findOne({
@@ -118,7 +105,7 @@ app.post("/auth", async ({ body }, res) => {
     res.send({ error: "invalid email or password" });
   }
   res.send({
-    token: jwt.sign({ email: body.email, issuer: "dis" }, "changeME"), // replace changeme with a secret
+    token: jwt.sign({ email: body.email, issuer: "dis" }, JWT_SECRET),
     iat: ~~(new Date() / 1000)
   });
 });
@@ -126,4 +113,3 @@ app.post("/auth", async ({ body }, res) => {
 app.listen({ port: 3006 }, () =>
   console.log("Now browse to http://localhost:3006" + server.graphqlPath)
 );
-

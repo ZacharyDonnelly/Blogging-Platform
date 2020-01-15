@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
 
-import HomePage from "./components/homepage/homepage";
+import HomePage from "../src/containers/homepage/homepage";
 import BlogLanding from "./components/blog-landing/blog-landing";
 import Login from "./components/login/login-page";
 import Signup from "./components/signup/signup-page";
