@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const ToggleContainer = styled.button`
   position: absolute;
-  top: 70px;
+  top: 67px;
   right: 0;
   z-index: 40;
   display: flex;
   justify-content: space-between;
   background: ${({ theme }) => theme.gradient};
   width: 8rem;
-  height: 3rem;
+  height: 2.9rem;
   margin: 0 auto;
   border-radius: 30px;
   border: 2px solid ${({ theme }) => theme.toggleBorder};

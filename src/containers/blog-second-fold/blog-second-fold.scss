@@ -5,8 +5,8 @@ $font-weight: 400;
 $font-family-header: "Open Sans", sans-serif;
 $font-family-body: "Roboto", sans-serif;
 $color-white: #fff;
-$color-header-black: rgba(0, 0, 0, 0.84);
-$color-body-gray: lightgray;
+$color-header: rgba(0, 0, 0, 0.84);
+$color-body: rgba(0, 0, 0, 0.54);
 $max-width: 100%;
 $max-width-125: 125%;
 
@@ -37,7 +37,7 @@ $max-width-125: 125%;
   .card-header {
     margin-bottom: 8px;
     font-family: $font-family-header;
-    color: $color-body-gray;
+    color: $color-body;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
   }
@@ -47,7 +47,7 @@ $max-width-125: 125%;
     letter-spacing: 0.5px;
     font-family: $font-family-body;
     font-size: 19px;
-    color: $color-body-gray;
+    color: $color-body;
     -webkit-font-smoothing: antialiased;
   }
 }
