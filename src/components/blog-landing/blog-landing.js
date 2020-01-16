@@ -7,8 +7,9 @@ import { lightTheme, darkTheme } from "../../styled-components-config/theme";
 import { GlobalStyles } from "../../styled-components-config/global";
 
 import BlogNav from "../../containers/blog-landing-nav/blog-landing-nav";
-import BlogTop from "../../containers/blog-first-fold/blog-first-fold";
-import BlogMiddle from "../../containers/blog-second-fold/blog-second-fold";
+import BlogTop from "../../containers/blog-landing-first-fold/blog-first-fold";
+import BlogMiddle from "../../containers/blog-landing-second-fold/blog-second-fold";
+import BlogFooter from "../../containers/blog-landing-footer/blog-landing-footer.js";
 
 import "./blog-landing.scss";
 
@@ -23,6 +24,7 @@ const BlogLanding = () => {
         <BlogNav />
         <BlogTop />
         <BlogMiddle />
+        <BlogFooter />
       </div>
     </ThemeProvider>
   );

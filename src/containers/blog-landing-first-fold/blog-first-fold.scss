@@ -3,8 +3,6 @@
 /****VARIABLES*******/
 $font-family-header: "Open Sans", sans-serif;
 $font-family-body: "Roboto", sans-serif;
-$li-margin: 13px;
-$max-width: 100%;
 $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
 .blog-wrapper {
@@ -19,7 +17,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   -ms-grid-columns: 1fr 100px 1fr 100px 1fr;
   grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 80px 10px 1fr 10px 80px;
-  grid-template-rows: 80px 1fr 80px;
+  grid-template-rows: 80px 1fr 30px;
   grid-template-areas:
     "....... header  ......."
     "sidebar content content"

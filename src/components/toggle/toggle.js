@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ToggleContainer = styled.button`
   position: absolute;
-  top: 67px;
+  top: 75px;
   right: 0;
   z-index: 40;
   display: flex;

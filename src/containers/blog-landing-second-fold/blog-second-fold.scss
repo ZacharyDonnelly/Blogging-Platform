@@ -7,17 +7,16 @@ $font-family-body: "Roboto", sans-serif;
 $max-width: 100%;
 $max-width-125: 125%;
 
-.middle-fold {
-  margin-top: 10px;
-  position: relative;
-}
+// .middle-fold {
+//   position: relative;
+// }
 
 .card-container {
   margin-left: 75px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 150px 1fr 80px;
+  grid-template-rows: 90px 1fr 80px;
   grid-template-areas:
     "header header"
     "contentOne contentTwo"
@@ -60,4 +59,10 @@ $max-width-125: 125%;
 }
 .card-four {
   grid-area: contentFour;
+}
+
+.second-fold-hr {
+  width: 80%;
+  margin: 175px 0 0 190px;
+  color: rgba(0, 0, 0, 0.2);
 }
