@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../../SC-Theme/theme";
-import { GlobalStyles } from "../../SC-Theme/global";
+import { lightTheme, darkTheme } from "../../styled-components-config/theme";
+import { GlobalStyles } from "../../styled-components-config/global";
 import Toggle from "../../components/toggle/toggle";
 
 import "./homepage.scss";
@@ -12,13 +12,7 @@ const HomePage = () => {
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   const toggleTheme = () => {
-    // if the theme is not light, then set it to dark
-    if (theme === "light") {
-      setTheme("dark");
-      // otherwise, it should be light
-    } else {
-      setTheme("light");
-    }
+    theme === "light" ? setTheme("dark") : setTheme("light");
   };
   return (
     <ThemeProvider theme={themeMode}>

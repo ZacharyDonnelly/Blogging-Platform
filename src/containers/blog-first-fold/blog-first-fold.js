@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
-import { lightTheme, darkTheme } from "../../SC-Theme/theme";
-import { GlobalStyles } from "../../SC-Theme/global";
+import { lightTheme, darkTheme } from "../../styled-components-config/theme";
+import { GlobalStyles } from "../../styled-components-config/global";
 import photo from "../../../public/assets/PS-Blog.png";
 import Toggle from "../../components/toggle/toggle";
 

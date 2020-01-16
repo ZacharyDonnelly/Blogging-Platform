@@ -32,6 +32,15 @@ const BlogMiddle = () => {
             autem. Quia, assumenda neque.
           </p>
         </div>
+        <div className="card card-four">
+          <h2 className="card-header">Card Three</h2>
+          <p className="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            commodi earum voluptas nemo nobis itaque, soluta eligendi facilis
+            exercitationem molestias asperiores dicta quod debitis. Quas, beatae
+            autem. Quia, assumenda neque.
+          </p>
+        </div>
       </div>
     </div>
   );

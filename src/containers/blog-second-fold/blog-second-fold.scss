@@ -4,9 +4,6 @@
 $font-weight: 400;
 $font-family-header: "Open Sans", sans-serif;
 $font-family-body: "Roboto", sans-serif;
-$color-white: #fff;
-$color-header: rgba(0, 0, 0, 0.84);
-$color-body: rgba(0, 0, 0, 0.54);
 $max-width: 100%;
 $max-width-125: 125%;
 
@@ -19,16 +16,17 @@ $max-width-125: 125%;
   margin-left: 75px;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 150px 1fr 80px;
   grid-template-areas:
-    "header header header"
-    "contentOne contentTwo contentThree"
-    "footer footer footer";
+    "header header"
+    "contentOne contentTwo"
+    "contentThree contentFour";
 }
 
 .card {
-  width: 75%;
+  width: 60%;
+  margin: 25px 0 0 130px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -37,7 +35,6 @@ $max-width-125: 125%;
   .card-header {
     margin-bottom: 8px;
     font-family: $font-family-header;
-    color: $color-body;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
   }
@@ -47,8 +44,8 @@ $max-width-125: 125%;
     letter-spacing: 0.5px;
     font-family: $font-family-body;
     font-size: 19px;
-    color: $color-body;
     -webkit-font-smoothing: antialiased;
+    -webkit-line-clamp: 2 !important;
   }
 }
 
@@ -60,4 +57,7 @@ $max-width-125: 125%;
 }
 .card-three {
   grid-area: contentThree;
+}
+.card-four {
+  grid-area: contentFour;
 }
