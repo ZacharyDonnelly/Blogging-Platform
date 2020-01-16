@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
 import { connect } from "react-redux";
@@ -6,29 +6,27 @@ import { connect } from "react-redux";
 import "./blog-landing-nav.scss";
 
 const BlogNav = props => {
-  const navRef = useRef();
+  const [scroll, setScroll] = useState(false);
+  const ref = useRef(null);
   useEffect(() => {
-    const fixNav = () => {
-      const doc = document.body;
-      const topOfNav = navRef.current.offsetTop;
-      if (window.scrollY >= topOfNav) {
-        doc.style.paddingTop = `${navRef.current.offsetHeight}px`;
-        doc.classList.add("fixed-nav");
-      } else {
-        doc.style.paddingTop = 0;
-        doc.classList.remove("fixed-nav");
+    const handleScroll = () => {
+      if (ref.current.getBoundingClientRect().top <= 0) {
+        setScroll(true);
       }
     };
-    window.addEventListener("scroll", fixNav);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", fixNav);
-      location.reload();
-      navRef.style.width = "100%";
+      window.removeEventListener("scroll", () => handleScroll);
     };
-  }, ["scroll"]);
+  });
   return (
     <div>
-      <nav className="blog-nav" ref={navRef}>
+      <nav
+        className="blog-nav"
+        ref={ref}
+        style={{
+          position: scroll ? "fixed" : "relative"
+        }}>
         <div className="clearfix">
           <ul className="blog-list-left">
             <Link to="/" className="blog-link">

@@ -3,45 +3,33 @@
 /****VARIABLES*******/
 $font-size: 1.4rem;
 $font-weight: 400;
-$text-align: center;
 $font-family-WorkSans: "Work Sans", sans-serif;
 $display-style: flex;
-$list-style: none;
 $li-margin: 13px;
 $color-white: #fff;
 $nav-color: rgba(0, 0, 0, 0.54);
 $color-lighter-black: #333;
-$max-width: 100%;
-$max-width-125: 125%;
 
 /**NAVBAR STYLES**/
 .blog-nav {
-  height: 75px;
+  height: 61px;
   background: darken($color-white, 7%);
   -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
-  max-width: $max-width;
+  max-width: 100%;
   top: 0;
   width: 100%;
   transition: all 0.5s;
-  position: relative;
-  z-index: 100;
-  -webkit-font-smoothing: antialiased;
   line-height: 22.4px;
-}
-
-.fixed-nav nav {
-  position: fixed;
-  height: 60px;
-  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .blog-list-left {
   color: $nav-color;
   font-weight: $font-weight;
   font-size: $font-size;
-  list-style: $list-style;
+  list-style: none;
   display: $display-style;
   position: absolute;
   left: 1.6%;
@@ -51,19 +39,19 @@ $max-width-125: 125%;
   grid-area: midHeader;
   font-family: "Lato";
   font-size: 1.9rem;
-  margin-top: 10px;
   color: $nav-color;
   left: -1px;
   right: 0;
+  top: 13px;
   font-weight: $font-weight;
-  text-align: $text-align;
+  text-align: center;
 }
 
 .blog-list-right {
   color: $nav-color;
   font-weight: $font-weight;
   font-size: $font-size;
-  list-style: $list-style;
+  list-style: none;
   display: $display-style;
   position: absolute;
   right: 2.87%;
@@ -81,7 +69,7 @@ $max-width-125: 125%;
 
 .blog-link {
   font-family: $font-family-WorkSans;
-  text-decoration: $list-style;
+  text-decoration: none;
   font-size: 1.45rem;
   cursor: pointer;
   color: $nav-color;

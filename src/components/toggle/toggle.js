@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ToggleContainer = styled.button`
   position: absolute;
-  top: 75px;
+  top: 68px;
   right: 0;
   z-index: 40;
   display: flex;
@@ -18,6 +18,10 @@ const ToggleContainer = styled.button`
   padding: 0.5rem;
   overflow: hidden;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
   svg {
     width: 2.5rem;
     height: auto;

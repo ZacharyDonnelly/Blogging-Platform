@@ -11,8 +11,7 @@ const BlogMiddle = () => {
             <p className="card-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem commodi earum voluptas nemo nobis itaque, soluta
-              eligendi facilis exercitationem molestias asperiores dicta quod
-              debitis.
+              eligendi facilis exercitationem molestias asperiores.
             </p>
           </div>
           <div className="card card-two">
@@ -20,8 +19,7 @@ const BlogMiddle = () => {
             <p className="card-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem commodi earum voluptas nemo nobis itaque, soluta
-              eligendi facilis exercitationem molestias asperiores dicta quod
-              debitis.
+              eligendi facilis exercitationem molestias asperiores.
             </p>
           </div>
           <div className="card card-three">
@@ -29,8 +27,7 @@ const BlogMiddle = () => {
             <p className="card-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem commodi earum voluptas nemo nobis itaque, soluta
-              eligendi facilis exercitationem molestias asperiores dicta quod
-              debitis.
+              eligendi facilis exercitationem molestias asperiores.
             </p>
           </div>
           <div className="card card-four">
@@ -38,8 +35,7 @@ const BlogMiddle = () => {
             <p className="card-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem commodi earum voluptas nemo nobis itaque, soluta
-              eligendi facilis exercitationem molestias asperiores dicta quod
-              debitis.
+              eligendi facilis exercitationem molestias asperiores.
             </p>
           </div>
         </div>

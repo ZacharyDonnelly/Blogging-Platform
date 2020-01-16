@@ -1,22 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto");
 
 /****VARIABLES*******/
-$font-weight: 400;
 $font-family-header: "Open Sans", sans-serif;
 $font-family-body: "Roboto", sans-serif;
-$max-width: 100%;
-$max-width-125: 125%;
-
-// .middle-fold {
-//   position: relative;
-// }
 
 .card-container {
   margin-left: 75px;
   display: -ms-grid;
   display: grid;
+  gap: 25px 0;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 90px 1fr 80px;
+  grid-template-rows: 45px 1fr 80px;
   grid-template-areas:
     "header header"
     "contentOne contentTwo"

@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
 .link {
   color: ${({ theme }) => theme.text} !important;
+  text-decoration: none !important;
 }
 
 .homepage-header {

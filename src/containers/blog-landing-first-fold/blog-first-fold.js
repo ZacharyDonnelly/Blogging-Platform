@@ -57,9 +57,9 @@ const BlogTop = () => {
                 eligendi incidunt corrupti ducimus illum magni.
               </p>
             </div>
+            <img src={photo} className="blog-img"></img>
+            <Toggle theme={theme} toggleTheme={toggleTheme} />
           </div>
-          <img src={photo} className="blog-img"></img>
-          <Toggle theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>
       <hr className="blog-hr" />

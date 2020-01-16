@@ -9,6 +9,7 @@ $font-family-body: "Lato", sans-serif;
   margin: 40px;
   font-family: "Raleway", sans-serif;
   color: #3c4142;
+  // padding-bottom: 25px;
 }
 
 .homepage-header {
@@ -83,7 +84,7 @@ $font-family-body: "Lato", sans-serif;
   height: calc(100vh - 80px);
   display: -ms-grid;
   display: grid;
-  grid-gap: 10px 100px;
+  gap: 10px 100px;
   -ms-grid-columns: 1fr 100px 1fr 100px 1fr;
   grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 80px 10px 1fr 10px 80px;
@@ -93,9 +94,4 @@ $font-family-body: "Lato", sans-serif;
     "sidebar content content"
     ".......  footer  footer";
   background-color: #fff;
-}
-
-.link {
-  text-decoration: none;
-  color: #3c4142;
 }
