@@ -5,7 +5,7 @@ const ToggleContainer = styled.button`
   position: absolute;
   top: 68px;
   right: 0;
-  z-index: 40;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   background: ${({ theme }) => theme.gradient};

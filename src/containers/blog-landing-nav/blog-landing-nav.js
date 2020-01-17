@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Avatar } from "antd";
 import { connect } from "react-redux";
 
+import SvgComponent from "../../utils/svg/svg-config";
 import "./blog-landing-nav.scss";
 
 const BlogNav = props => {
@@ -40,7 +41,9 @@ const BlogNav = props => {
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />
         </div>
-        <h2 className="nav-center">Bloggr</h2>
+        <h2 className="nav-center">
+          <SvgComponent className="blog-nav-svg-logo" />
+        </h2>
       </nav>
     </div>
   );

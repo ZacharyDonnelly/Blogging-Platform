@@ -42,14 +42,17 @@ $color-lighter-black: #333;
 .nav-center {
   position: absolute;
   grid-area: midHeader;
-  font-family: "Lato";
-  font-size: 1.9rem;
-  color: $nav-color;
-  left: -1px;
-  right: 0;
-  top: 13px;
-  font-weight: $font-weight;
   text-align: center;
+  left: 0;
+  right: 0;
+  top: -60px;
+
+  .blog-nav-svg-logo {
+    z-index: 100;
+    height: 200px;
+    color: $nav-color;
+    cursor: default;
+  }
 }
 
 .blog-list-right {
