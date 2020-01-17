@@ -20,7 +20,7 @@ const BlogNav = props => {
     };
   });
   return (
-    <div>
+    <div className="blog-nav-wrapper">
       <nav
         className="blog-nav"
         ref={ref}

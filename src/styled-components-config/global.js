@@ -36,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
   color: ${({ theme }) => theme.text} !important;
 }
 
-.full {
+.blog-landing-root {
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text} !important;
 }
