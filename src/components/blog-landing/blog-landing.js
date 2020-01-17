@@ -20,7 +20,7 @@ const BlogLanding = () => {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
-      <div className="full">
+      <div className="blog-landing-root">
         <BlogNav />
         <BlogTop />
         <BlogMiddle />

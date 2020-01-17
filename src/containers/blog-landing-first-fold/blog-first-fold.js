@@ -25,44 +25,43 @@ const BlogTop = () => {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
-      <div>
-        <div className="blog-wrapper">
-          <div className="blog-container">
-            <div className="sidebar-container">
-              <h2 className="sidebar-header">A Little Description..</h2>
-              <p className="sidebar-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-                impedit commodi excepturi nulla aliquam quia autem vero ut.
-                Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
-                cupiditate nostrum, reprehenderit et consectetur. Est earum
-                dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
-                eligendi incidunt corrupti ducimus illum magni.
-              </p>
-              <br />
-              <p className="sidebar-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-                impedit commodi excepturi nulla aliquam quia autem vero ut.
-                Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
-                cupiditate nostrum, reprehenderit et consectetur. Est earum
-                dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
-                eligendi incidunt corrupti ducimus illum magni.
-              </p>
-              <br />
-              <p className="sidebar-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-                impedit commodi excepturi nulla aliquam quia autem vero ut.
-                Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
-                cupiditate nostrum, reprehenderit et consectetur. Est earum
-                dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
-                eligendi incidunt corrupti ducimus illum magni.
-              </p>
-            </div>
-            <img src={photo} className="blog-img"></img>
-            <Toggle theme={theme} toggleTheme={toggleTheme} />
+      <div className="blog-wrapper">
+        <div className="blog-container">
+          <div className="sidebar-container">
+            <h2 className="sidebar-header">A Little Description..</h2>
+            <p className="sidebar-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+              impedit commodi excepturi nulla aliquam quia autem vero ut.
+              Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
+              cupiditate nostrum, reprehenderit et consectetur. Est earum
+              dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
+              eligendi incidunt corrupti ducimus illum magni.
+            </p>
+            <br />
+            <p className="sidebar-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+              impedit commodi excepturi nulla aliquam quia autem vero ut.
+              Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
+              cupiditate nostrum, reprehenderit et consectetur. Est earum
+              dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
+              eligendi incidunt corrupti ducimus illum magni.
+            </p>
+            <br />
+            <p className="sidebar-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+              impedit commodi excepturi nulla aliquam quia autem vero ut.
+              Aliquam eius soluta nobis magnam qui dolor fugit natus obcaecati
+              cupiditate nostrum, reprehenderit et consectetur. Est earum
+              dolorum porro facilis fugit quidem nemo aliquam dignissimos. Ex,
+              eligendi incidunt corrupti ducimus illum magni.
+            </p>
           </div>
+          <img src={photo} className="blog-img"></img>
+          <Toggle theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>
       <hr className="blog-hr" />
+      <h3 className="blog-featured">Featured posts</h3>
     </ThemeProvider>
   );
 };

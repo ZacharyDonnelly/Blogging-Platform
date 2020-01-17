@@ -2,6 +2,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import {
   emailAction,
@@ -18,7 +19,7 @@ import "./login.scss";
 const Login = props => {
   return (
     <>
-      <LoginNav page={"Sign-up"} value={"/signup"} />
+      <LoginNav />
       <div className="sign-in">
         <h2 className="title">I already have an account</h2>
         <span>Sign in with your email and password</span>
@@ -47,6 +48,9 @@ const Login = props => {
             <label className="form-input-label">Password</label>
           </div>
         </form>
+        <Link to="/signup" className="login-form-link">
+          Don&apos;t have an account? Click here to sign up
+        </Link>
         <SignupButtonRed value={"in"} />
         <SignupButtonBlack
           value={"Sign-in"}

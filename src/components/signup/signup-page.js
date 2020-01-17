@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
 import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
@@ -17,7 +18,7 @@ import {
 const Signup = props => {
   return (
     <>
-      <LoginNav value="/login" />
+      <LoginNav />
       <div className="sign-up">
         <h2 className="title">I do not have an account</h2>
         <span>Sign up with your email and password</span>
@@ -56,6 +57,9 @@ const Signup = props => {
             <label className="form-input-label">Password</label>
           </div>
         </form>
+        <Link to="/login" className="login-form-link">
+          Already have an account? Click here to sign in
+        </Link>
         <SignupButtonRed />
         <SignupButtonBlack buttonClick={() => handleSubmit(props)} />
       </div>

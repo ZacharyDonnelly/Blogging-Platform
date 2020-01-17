@@ -22,6 +22,13 @@ const ToggleContainer = styled.button`
   &:focus {
     outline: none;
   }
+
+  @media (max-width: 767px) {
+    top: 15px;
+    right: -225px;
+    outline: none;
+  }
+
   svg {
     width: 2.5rem;
     height: auto;
@@ -33,6 +40,9 @@ const ToggleContainer = styled.button`
     &:nth-child(2) {
       transform: ${({ lightTheme }) =>
         lightTheme ? "translateY(-100px)" : "translateY(0)"};
+    }
+    @media (max-width: 767px) {
+      width: 1.75rem;
     }
   }
 `;
