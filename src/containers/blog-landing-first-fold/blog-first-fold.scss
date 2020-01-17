@@ -31,6 +31,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     font-size: 14px;
   }
 }
+
 .sidebar-container {
   width: 59%;
   margin-left: 85px;
@@ -56,6 +57,11 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   }
 }
 
+.blog-featured {
+  position: absolute;
+  left: 45%;
+}
+
 /**IMAGE STYLES**/
 
 .blog-img {
@@ -75,7 +81,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 /**HR**/
 
 .blog-hr {
-  width: 90%;
+  width: 80%;
   margin-left: 190px;
   color: rgba(0, 0, 0, 0.2);
 

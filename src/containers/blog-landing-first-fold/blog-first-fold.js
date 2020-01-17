@@ -61,6 +61,7 @@ const BlogTop = () => {
         </div>
       </div>
       <hr className="blog-hr" />
+      <h3 className="blog-featured">Featured posts</h3>
     </ThemeProvider>
   );
 };
