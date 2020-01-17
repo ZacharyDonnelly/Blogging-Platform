@@ -5,7 +5,7 @@ const ToggleContainer = styled.button`
   position: absolute;
   top: 68px;
   right: 0;
-  z-index: 40;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   background: ${({ theme }) => theme.gradient};
@@ -30,7 +30,7 @@ const ToggleContainer = styled.button`
   }
 
   svg {
-    width: 2.5rem;
+    width: 1.9rem;
     height: auto;
     transition: all 0.3s linear;
     &:first-child {

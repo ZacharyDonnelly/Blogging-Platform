@@ -28,6 +28,7 @@ Dark Mode available
  NextJS ~ SSR library for JavaScript
  SCSS ~ CSS preprocessor
  Styled Components ~ UI library for global styles/reusable components
+ SVG ~ Custom icons made by me
  GraphQL ~ SUPER FAST query language
  Apollo ~ Middleware to connect JavaScript to GraphQL
 ```

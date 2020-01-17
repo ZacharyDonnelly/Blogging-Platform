@@ -28,6 +28,10 @@ $color-lighter-black: #333;
   transition: all 0.5s;
   line-height: 22.4px;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    width: 200vw !important;
+  }
 }
 
 .blog-list-left {
@@ -42,14 +46,24 @@ $color-lighter-black: #333;
 .nav-center {
   position: absolute;
   grid-area: midHeader;
-  font-family: "Lato";
-  font-size: 1.9rem;
-  color: $nav-color;
-  left: -1px;
-  right: 0;
-  top: 13px;
-  font-weight: $font-weight;
   text-align: center;
+  left: 0;
+  right: 0;
+  top: -60px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  .blog-nav-svg-logo {
+    z-index: 100;
+    height: 200px;
+    color: $nav-color;
+    cursor: default;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .blog-list-right {

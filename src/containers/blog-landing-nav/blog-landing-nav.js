@@ -3,27 +3,28 @@ import { Link } from "react-router-dom";
 import { Avatar } from "antd";
 import { connect } from "react-redux";
 
+import SvgComponent from "../../utils/svg/nav-svg-config";
 import "./blog-landing-nav.scss";
 
 const BlogNav = props => {
   const [scroll, setScroll] = useState(false);
-  const ref = useRef(null);
+  const navRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
-      if (ref.current.getBoundingClientRect().top <= 0) {
+      if (navRef.current.getBoundingClientRect().top <= 0) {
         setScroll(true);
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () => handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
   return (
     <div className="blog-nav-wrapper">
       <nav
         className="blog-nav"
-        ref={ref}
+        ref={navRef}
         style={{
           position: scroll ? "fixed" : "relative"
         }}>
@@ -40,7 +41,9 @@ const BlogNav = props => {
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />
         </div>
-        <h2 className="nav-center">Bloggr</h2>
+        <h2 className="nav-center">
+          <SvgComponent className="blog-nav-svg-logo" />
+        </h2>
       </nav>
     </div>
   );
