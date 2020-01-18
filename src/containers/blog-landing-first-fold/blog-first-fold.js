@@ -10,7 +10,7 @@ import Toggle from "../../components/toggle/toggle";
 import "./blog-first-fold.scss";
 
 const BlogTop = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   const toggleTheme = () => {
