@@ -14,6 +14,11 @@ $color-lighter-black: #333;
 .blog-nav-wrapper {
   height: 61px;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 200vw !important;
+    position: -webkit-sticky;
+  }
 }
 
 .blog-nav {
@@ -31,6 +36,7 @@ $color-lighter-black: #333;
 
   @media (max-width: 768px) {
     width: 200vw !important;
+    position: -webkit-sticky;
   }
 }
 

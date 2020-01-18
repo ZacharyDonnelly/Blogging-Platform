@@ -10,24 +10,19 @@ import Toggle from "../../components/toggle/toggle";
 import "./blog-first-fold.scss";
 
 const BlogTop = props => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const themeMode = theme === "light" ? lightTheme : darkTheme;
-  const [email, setEmail] = useState(false);
+  const [email, setEmail] = useState();
 
   const toggleTheme = () => {
-    // if the theme is not light, then set it to dark
-    if (theme === "light") {
+    if (theme !== "light") {
       setTheme("dark");
-      // otherwise, it should be light
     } else {
       setTheme("light");
     }
   };
   useEffect(() => {
-    setEmail(
-      JSON.parse(JSON.stringify(localStorage.getItem("email", props.email)))
-    );
-    return () => {};
+    setEmail(JSON.stringify(localStorage.getItem("email", props.email)));
   });
 
   return (

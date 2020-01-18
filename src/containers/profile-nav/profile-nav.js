@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import SvgComponent from "../../utils/svg/nav-svg-config";
 import "./profile-nav.scss";
 
-const ProfileNav = props => {
+const ProfileNav = () => {
   return (
     <div className="profile-nav-wrapper">
       <nav className="profile-nav-navbar">

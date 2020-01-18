@@ -11,14 +11,14 @@ const BlogNav = props => {
   const [email, setEmail] = useState(false);
   const navRef = useRef(null);
   useEffect(() => {
-    setEmail(
-      JSON.parse(JSON.stringify(localStorage.getItem("email", props.email)))
-    );
     const handleScroll = () => {
-      if (window.pageYOffset <= 0) {
+      if (window.scrollY > 0.001) {
         setScroll(true);
       }
     };
+    setEmail(
+      JSON.parse(JSON.stringify(localStorage.getItem("email", props.email)))
+    );
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
