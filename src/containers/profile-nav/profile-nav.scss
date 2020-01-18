@@ -11,7 +11,8 @@ $nav-height: 61px;
 }
 
 .profile-nav-list-left,
-.profile-nav-list-right {
+.profile-nav-list-right,
+.profile-nav-list-logout {
   position: absolute;
   list-style: none;
   font-size: $font-size;
@@ -26,6 +27,12 @@ $nav-height: 61px;
   left: 1.6%;
 }
 .profile-nav-list-right {
+  right: 10%;
+}
+.profile-nav-list-logout {
+  color: #333 !important;
+  outline-color: #333 !important;
+  text-shadow: rgba(0, 0, 0, 0.7) !important;
   right: 5%;
 }
 

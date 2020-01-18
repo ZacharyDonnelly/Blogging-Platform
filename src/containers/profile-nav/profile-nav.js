@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
-
+import { connect } from "react-redux";
 import SvgComponent from "../../utils/svg/nav-svg-config";
 import "./profile-nav.scss";
 
-const ProfileNav = () => {
+const ProfileNav = props => {
   return (
     <div className="profile-nav-wrapper">
       <nav className="profile-nav-navbar">
@@ -16,7 +16,12 @@ const ProfileNav = () => {
         </div>
         <div className="clearfix">
           <ul className="profile-nav-list-right">
-            <Link to="/">Blog</Link>
+            <Link to="/blog">Blog</Link>
+          </ul>
+          <ul className="profile-nav-list-logout">
+            <Link to="/" onClick={signOut}>
+              Sign Out
+            </Link>
           </ul>
           <Avatar size={64} icon="user" className="profile-avatar" />
         </div>
@@ -28,4 +33,11 @@ const ProfileNav = () => {
   );
 };
 
-export default ProfileNav;
+const signOut = () => {
+  window.localStorage.removeItem("email");
+};
+const mapStateToProps = state => ({
+  email: state.email
+});
+
+export default connect(mapStateToProps)(ProfileNav);
