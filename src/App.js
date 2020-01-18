@@ -15,6 +15,9 @@ const store = configureStore();
 
 const client = new ApolloClient({ uri: "http://localhost:3006/graphql" });
 
+//add auth route so profile wont display
+// /post:id using match.path
+
 const App = () => (
   <ApolloProvider client={client}>
     <Provider store={store}>

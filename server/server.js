@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
-import { ApolloServer } from "apollo-server-express";
-import graphqlHTTP from "express-graphql";
+// import { ApolloServer } from "apollo-server-express";
+// import graphqlHTTP from "express-graphql";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import schema from "./schemas/gqlSchema";
+// import schema from "./schemas/gqlSchema";
 import { MONGO_URI, JWT_SECRET } from "./config/settings";
 import userSchema from "./schemas/users";
 
@@ -16,22 +16,22 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 
-const resolvers = {
-  hello: () => "Hello world!",
-  age: () => 1122334,
-  oldEnough: () => false
-};
+// const resolvers = {
+//   hello: () => "Hello world!",
+//   age: () => 1122334,
+//   oldEnough: () => false
+// };
 
-app.use(
-  "/graphql",
-  graphqlHTTP({
-    schema,
-    rootValue: resolvers,
-    graphiql: true
-  })
-);
-const server = new ApolloServer({ schema });
-server.applyMiddleware({ app });
+// app.use(
+//   "/graphql",
+//   graphqlHTTP({
+//     schema,
+//     rootValue: resolvers,
+//     graphiql: true
+//   })
+// );
+// const server = new ApolloServer({ schema });
+// server.applyMiddleware({ app });
 
 const validateAuth = (req, res, next) => {
   const authHeader = req.headers["authorization"];
@@ -44,6 +44,7 @@ const validateAuth = (req, res, next) => {
   const bearer = authHeader.split("Bearer")[1];
 
   try {
+    // eslint-disable-next-line no-unused-vars
     const decoded = jwt.verify(bearer.replace(" ", ""), JWT_SECRET);
   } catch (err) {
     res.status(405);
@@ -60,6 +61,7 @@ app.get("/thing", validateAuth, (req, res) => {
 });
 
 app.post("/verify", async ({ body }, res) => {
+  // put logic within /users route
   try {
     const emailTaken = await userSchema.findOne({
       email: body.email
@@ -111,5 +113,5 @@ app.post("/auth", async ({ body }, res) => {
 });
 
 app.listen({ port: 3006 }, () =>
-  console.log("Now browse to http://localhost:3006" + server.graphqlPath)
+  console.log("Now browse to http://localhost:3006")
 );

@@ -14,8 +14,8 @@ import BlogFooter from "../../containers/blog-landing-footer/blog-landing-footer
 import "./blog-landing.scss";
 
 const BlogLanding = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [theme, setTheme] = useState("light");
+  //remove redux from this
+  const [theme] = useState("light");
   const themeMode = theme === "light" ? lightTheme : darkTheme;
   return (
     <ThemeProvider theme={themeMode}>

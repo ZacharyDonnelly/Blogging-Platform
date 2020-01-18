@@ -16,58 +16,56 @@ import "./login.scss";
 
 // TODO CLEAR FORM FIELDS ON PAGE CHANGE
 
-const Login = props => {
-  return (
-    <>
-      <LoginNav />
-      <div className="sign-in">
-        <h2 className="title">I already have an account</h2>
-        <span>Sign in with your email and password</span>
+const Login = props => (
+  <>
+    <LoginNav />
+    <div className="sign-in">
+      <h2 className="title">I already have an account</h2>
+      <span>Sign in with your email and password</span>
 
-        <form>
-          <div className="group">
-            <input
-              className="form-input"
-              type="text"
-              name="email"
-              value={props.email}
-              onChange={e => props.dispatch(emailAction(e.target.value))}
-              required
-            />
-            <label className="form-input-label">Email</label>
-          </div>
-          <div className="group">
-            <input
-              className="form-input"
-              type="password"
-              name="password"
-              value={props.password}
-              onChange={e => props.dispatch(passwordAction(e.target.value))}
-              required
-            />
-            <label className="form-input-label">Password</label>
-          </div>
-        </form>
-        <Link to="/signup" className="login-form-link">
-          Don&apos;t have an account? Click here to sign up
-        </Link>
-        <SignupButtonRed value={"in"} />
-        <SignupButtonBlack
-          value={"Sign-in"}
-          buttonClick={() => handleClick(props)}
-        />
-      </div>
-    </>
-  );
-};
+      <form>
+        <div className="group">
+          <input
+            className="form-input"
+            type="text"
+            name="email"
+            value={props.email}
+            onChange={e => props.dispatch(emailAction(e.target.value))}
+            required
+          />
+          <label className="form-input-label">Email</label>
+        </div>
+        <div className="group">
+          <input
+            className="form-input"
+            type="password"
+            name="password"
+            value={props.password}
+            onChange={e => props.dispatch(passwordAction(e.target.value))}
+            required
+          />
+          <label className="form-input-label">Password</label>
+        </div>
+      </form>
+      <Link to="/signup" className="login-form-link">
+        Don&apos;t have an account? Click here to sign up
+      </Link>
+      <SignupButtonRed value={"in"} />
+      <SignupButtonBlack
+        value={"Sign-in"}
+        buttonClick={() => handleClick(props)}
+      />
+    </div>
+  </>
+);
 const handleClick = async props => {
-  window.localStorage.setItem("new", JSON.stringify({ email: props.email }));
   try {
     const { data } = await axios.post("http://localhost:3006/auth", {
-      ...props
+      email: props.email,
+      password: props.password
     });
     props.dispatch(tokenAction(data.token));
-    localStorage.setItem("email", props.email);
+    localStorage.setItem("email", props.email); //fix with redux persistance
     localStorage.setItem("token", JSON.stringify(data));
     props.history.push("/blog");
   } catch (err) {

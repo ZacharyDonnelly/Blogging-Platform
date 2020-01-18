@@ -11,8 +11,8 @@ import "./blog-first-fold.scss";
 
 const BlogTop = props => {
   const [theme, setTheme] = useState("light");
+  const [email, setEmail] = useState(false);
   const themeMode = theme === "light" ? lightTheme : darkTheme;
-  const [email, setEmail] = useState();
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -22,7 +22,8 @@ const BlogTop = props => {
     }
   };
   useEffect(() => {
-    setEmail(JSON.stringify(localStorage.getItem("email", props.email)));
+    setEmail(localStorage.getItem("email", props.email));
+    console.log(email);
   });
 
   return (
@@ -32,7 +33,7 @@ const BlogTop = props => {
         {email ? (
           <div className="blog-add-post">Add Post</div>
         ) : (
-          <div className="blog-add-post"></div>
+          <div style={{ display: "none" }}></div>
         )}
         <div className="blog-container">
           <div className="sidebar-container">
