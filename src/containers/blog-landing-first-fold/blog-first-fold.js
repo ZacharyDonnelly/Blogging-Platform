@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
@@ -9,23 +9,31 @@ import Toggle from "../../components/toggle/toggle";
 
 import "./blog-first-fold.scss";
 
-const BlogTop = () => {
+const BlogTop = props => {
   const [theme, setTheme] = useState("light");
   const themeMode = theme === "light" ? lightTheme : darkTheme;
+  const [email, setEmail] = useState();
 
   const toggleTheme = () => {
-    // if the theme is not light, then set it to dark
-    if (theme === "light") {
+    if (theme !== "light") {
       setTheme("dark");
-      // otherwise, it should be light
     } else {
       setTheme("light");
     }
   };
+  useEffect(() => {
+    setEmail(JSON.stringify(localStorage.getItem("email", props.email)));
+  });
+
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <div className="blog-wrapper">
+        {email ? (
+          <div className="blog-add-post">Add Post</div>
+        ) : (
+          <div className="blog-add-post"></div>
+        )}
         <div className="blog-container">
           <div className="sidebar-container">
             <h2 className="sidebar-header">A Little Description..</h2>

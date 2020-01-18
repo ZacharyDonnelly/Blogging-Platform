@@ -8,13 +8,17 @@ import "./blog-landing-nav.scss";
 
 const BlogNav = props => {
   const [scroll, setScroll] = useState(false);
+  const [email, setEmail] = useState(false);
   const navRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
-      if (navRef.current.getBoundingClientRect().top <= 0) {
+      if (window.scrollY > 0.001) {
         setScroll(true);
       }
     };
+    setEmail(
+      JSON.parse(JSON.stringify(localStorage.getItem("email", props.email)))
+    );
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -36,7 +40,7 @@ const BlogNav = props => {
           </ul>
           <ul className="blog-list-right">
             <Link to="/profile" className="blog-link">
-              {!props.email ? "Profile" : props.email}
+              {!email ? "Profile" : email}
             </Link>
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />

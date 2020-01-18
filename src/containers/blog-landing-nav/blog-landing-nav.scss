@@ -14,6 +14,11 @@ $color-lighter-black: #333;
 .blog-nav-wrapper {
   height: 61px;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 200vw !important;
+    position: -webkit-sticky;
+  }
 }
 
 .blog-nav {
@@ -27,12 +32,12 @@ $color-lighter-black: #333;
   width: 100%;
   transition: all 0.5s;
   line-height: 22.4px;
-  z-index: 100;
+  z-index: 3;
 
   @media (max-width: 768px) {
     width: 200vw !important;
-  }
-}
+    position: -webkit-sticky;
+
 
 .blog-list-left {
   color: $nav-color;
@@ -47,6 +52,7 @@ $color-lighter-black: #333;
   position: absolute;
   grid-area: midHeader;
   text-align: center;
+  height: 100px;
   left: 0;
   right: 0;
   top: -60px;
@@ -55,7 +61,7 @@ $color-lighter-black: #333;
   }
 
   .blog-nav-svg-logo {
-    z-index: 100;
+    z-index: 11;
     height: 200px;
     color: $nav-color;
     cursor: default;
@@ -92,13 +98,19 @@ $color-lighter-black: #333;
   font-size: 1.45rem;
   cursor: pointer;
   color: $nav-color;
-  z-index: 100;
+  z-index: 11;
   margin: 18px 30px 0 30px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.3) !important;
+  }
 }
 
 .blog-avatar {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: absolute !important;
+  z-index: 9 !important;
+  height: 63px !important;
+  top: -1.8px !important;
+  right: 8px !important;
   color: $nav-color;
 }

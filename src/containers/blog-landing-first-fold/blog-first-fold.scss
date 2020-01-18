@@ -59,7 +59,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
 .blog-featured {
   position: absolute;
-  left: 45%;
+  left: 46%;
 }
 
 /**IMAGE STYLES**/
@@ -89,4 +89,15 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     width: 85%;
     margin-left: 155px;
   }
+}
+
+/**ADD POST**/
+
+.blog-add-post {
+  position: absolute;
+  left: 1%;
+  top: 3%;
+  color: #fff;
+  font-size: 18px;
+  font-family: $font-family-body;
 }

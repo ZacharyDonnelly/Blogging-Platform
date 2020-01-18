@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import "./blog-landing-footer.scss";
 
@@ -14,6 +16,18 @@ const BlogFooter = () => {
           <label htmlFor="class">Enter Email</label>
         </span>
       </form>
+      <div className="blog-footer-icons">
+        <FontAwesomeIcon
+          icon={faTwitter}
+          size="2x"
+          className="blog-footer-icon-twitter"
+        />
+        <FontAwesomeIcon
+          icon={faGithub}
+          size="2x"
+          className="blog-footer-icon-github"
+        />
+      </div>
     </div>
   );
 };

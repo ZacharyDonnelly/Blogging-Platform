@@ -61,12 +61,14 @@ const Login = props => {
   );
 };
 const handleClick = async props => {
+  window.localStorage.setItem("new", JSON.stringify({ email: props.email }));
   try {
     const { data } = await axios.post("http://localhost:3006/auth", {
       ...props
     });
     props.dispatch(tokenAction(data.token));
-    localStorage.setItem("creds", JSON.stringify(data));
+    localStorage.setItem("email", props.email);
+    localStorage.setItem("token", JSON.stringify(data));
     props.history.push("/blog");
   } catch (err) {
     alert("Invalid email or password!");

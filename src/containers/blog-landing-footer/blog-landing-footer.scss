@@ -107,4 +107,15 @@ span:nth-child(2) .gate:active {
       transform: rotate(10deg);
     }
   }
+
+}
+.blog-footer-icons {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 0 20px;
+
+  .blog-footer-icon-github,
+  .blog-footer-icon-twitter {
+    margin: 0 8px;
+  }
 }
