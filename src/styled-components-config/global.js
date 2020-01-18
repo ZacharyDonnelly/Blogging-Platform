@@ -29,6 +29,13 @@ export const GlobalStyles = createGlobalStyle`
 .card-header {
   color: ${({ theme }) => theme.text} !important;
 }
+
+.blog-footer-header {
+  color: ${({ theme }) => theme.text} !important;
+}
+.blog-featured {
+  color: ${({ theme }) => theme.text} !important;
+}
 .sidebar-text {
   color: ${({ theme }) => theme.text} !important;
 }

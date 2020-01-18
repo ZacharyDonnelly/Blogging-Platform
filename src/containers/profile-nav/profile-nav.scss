@@ -1,0 +1,38 @@
+$font-size: 1.45rem;
+$nav-height: 61px;
+
+.profile-nav-wrapper {
+  height: $nav-height;
+}
+
+.profile-nav-navbar {
+  background-color: #efefef;
+  height: $nav-height;
+}
+
+.profile-nav-list-left,
+.profile-nav-list-right {
+  position: absolute;
+  list-style: none;
+  font-size: $font-size;
+  font-weight: 400;
+  top: 1%;
+  cursor: pointer;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.profile-nav-list-left {
+  left: 1.6%;
+}
+.profile-nav-list-right {
+  right: 5%;
+}
+
+.profile-avatar {
+  position: absolute !important;
+  z-index: 2 !important;
+  height: 63px !important;
+  top: -1.8px !important;
+  right: 8px !important;
+}

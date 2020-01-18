@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const ToggleContainer = styled.button`
   position: absolute;
-  top: 68px;
+  top: 69px;
   right: 0;
-  z-index: 100;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   background: ${({ theme }) => theme.gradient};

@@ -5,6 +5,10 @@ $snowGray: hsl(0, 4%, 55%);
 $font-family-header: "Merriweather", serif;
 $font-family-body: "Lato", sans-serif;
 
+#main {
+  overflow: hidden;
+}
+
 .wrapper {
   margin: 40px;
   font-family: "Raleway", sans-serif;
