@@ -15,7 +15,7 @@ const BlogTop = props => {
   const [email, setEmail] = useState();
 
   const toggleTheme = () => {
-    if (theme !== "light") {
+    if (theme === "light") {
       setTheme("dark");
     } else {
       setTheme("light");
