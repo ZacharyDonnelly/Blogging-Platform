@@ -5,6 +5,7 @@ import {
   authorAction,
   bodyAction
 } from "../../actions/post-actions";
+import axios from "axios";
 
 import "./add-post.scss";
 
@@ -45,10 +46,16 @@ const AddPost = props => {
             required
           />
         </label>
-        <button className="button">Add Post</button>
+        <button className="button" onClick={() => handleClick({ ...props })}>
+          Add Post
+        </button>
       </form>
     </div>
   );
+};
+
+const handleClick = props => {
+  axios.post("http://localhost:3006/posts", { ...props });
 };
 
 const mapStateToProps = state => ({

@@ -8,6 +8,7 @@ import jwt from "jsonwebtoken";
 // import schema from "./schemas/gqlSchema";
 import { MONGO_URI, JWT_SECRET } from "./config/settings";
 import userSchema from "./schemas/users";
+import postSchema from "./schemas/postSchema";
 
 const app = express();
 mongoose.connect(MONGO_URI, { useNewUrlParser: true });
@@ -79,6 +80,29 @@ app.post("/verify", async ({ body }, res) => {
   }
   res.status(200);
   res.send("No Match");
+});
+
+app.post("/posts", async ({ body }, res) => {
+  try {
+    const post = new postSchema({
+      body: body.body,
+      title: body.title,
+      author: body.author
+    });
+    await post.save();
+  } catch (err) {
+    console.log(err);
+  }
+
+  res.status(200);
+  res.send({ stored: "Success!" });
+});
+
+app.get("/getPosts", async res => {
+  // const { data } = await postSchema.find();
+  // res.send(JSON.parse(data));
+  const { data } = await postSchema.find();
+  res.send(JSON.parse(data));
 });
 
 app.post("/users", async ({ body }, res) => {

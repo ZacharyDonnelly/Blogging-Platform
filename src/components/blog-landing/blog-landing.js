@@ -10,7 +10,6 @@ import BlogNav from "../../containers/blog-landing-nav/blog-landing-nav";
 import BlogTop from "../../containers/blog-landing-first-fold/blog-first-fold";
 import BlogMain from "../../containers/blog-landing-main/blog-landing-main";
 import MapPosts from "../../containers/map-posts/map-post";
-import Posts from "../../containers/posts/posts";
 
 import "./blog-landing.scss";
 
