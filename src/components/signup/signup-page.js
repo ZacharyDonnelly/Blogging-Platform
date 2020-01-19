@@ -84,9 +84,9 @@ const handleSubmit = async props => {
 };
 
 const mapStateToProps = state => ({
-  email: state.email,
-  password: state.password,
-  display: state.display
+  email: state.login.email,
+  password: state.login.password,
+  display: state.login.display
 });
 
 export default connect(mapStateToProps)(Signup);

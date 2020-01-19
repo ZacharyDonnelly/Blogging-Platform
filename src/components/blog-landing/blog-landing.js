@@ -8,8 +8,8 @@ import { GlobalStyles } from "../../styled-components-config/global";
 
 import BlogNav from "../../containers/blog-landing-nav/blog-landing-nav";
 import BlogTop from "../../containers/blog-landing-first-fold/blog-first-fold";
-import BlogMiddle from "../../containers/blog-landing-second-fold/blog-second-fold";
-import BlogFooter from "../../containers/blog-landing-footer/blog-landing-footer.js";
+import BlogMain from "../../containers/blog-landing-main/blog-landing-main";
+import Posts from "../../containers/posts/posts";
 
 import "./blog-landing.scss";
 
@@ -23,8 +23,8 @@ const BlogLanding = () => {
       <div className="blog-landing-root">
         <BlogNav />
         <BlogTop />
-        <BlogMiddle />
-        <BlogFooter />
+        <BlogMain />
+        <Posts />
       </div>
     </ThemeProvider>
   );

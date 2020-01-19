@@ -23,12 +23,14 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     text-align: center;
   }
 
-  @media (max-width: 767px) {
-    display: flex;
+  @media screen and (max-width: 767px) {
+    display: block;
     position: relative;
     height: 100vh;
-    margin-bottom: 350px;
+    margin-bottom: 100px;
     font-size: 14px;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
   }
 }
 
@@ -42,6 +44,14 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     margin-bottom: 17.5px;
     font-family: $font-family-header;
     font-weight: 600;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+      text-rendering: optimizeLegibility;
+      text-size-adjust: 100%;
+    }
   }
   .sidebar-text {
     font-size: 20px;
@@ -50,18 +60,14 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     z-index: 3;
     font-family: $font-family-body;
     font-weight: 400;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
   }
-  @media (max-width: 767px) {
-    width: 102%;
-    margin-left: 125px;
+  @media screen and (max-width: 767px) {
+    width: 95%;
+    margin-left: 0;
   }
 }
-
-.blog-featured {
-  position: absolute;
-  left: 46%;
-}
-
 /**IMAGE STYLES**/
 
 .blog-img {
@@ -73,7 +79,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   background-size: cover;
   z-index: 2;
 
-  @media (max-width: 767px) {
+  @media screen and(max-width: 767px) {
     display: none;
   }
 }
@@ -85,8 +91,8 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   margin-left: 190px;
   color: rgba(0, 0, 0, 0.2);
 
-  @media (max-width: 767px) {
-    width: 85%;
-    margin-left: 155px;
+  @media screen and(max-width: 767px) {
+    display: none;
+    margin-bottom: 250px;
   }
 }

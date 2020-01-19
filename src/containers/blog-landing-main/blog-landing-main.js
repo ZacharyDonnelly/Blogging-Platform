@@ -3,15 +3,19 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-import AddPost from "../../containers/add-post/add-post";
-import "./blog-landing-footer.scss";
+import AddPost from "../add-post/add-post";
+import "./blog-landing-main.scss";
 
-const BlogFooter = ({ email }) => {
+const BlogMain = ({ email }) => {
   return (
     <>
       <div className="blog-footer">
         {email ? <AddPost /> : <div style={{ display: "none" }} />}
-        <div className="hr-div" />
+        {email ? (
+          <div className="hr-div" />
+        ) : (
+          <div style={{ display: "none" }} />
+        )}
         <h2 className="blog-footer-header">
           Would you like to receive my newsletter?
         </h2>
@@ -43,7 +47,7 @@ const BlogFooter = ({ email }) => {
 };
 
 const mapStateToProps = state => ({
-  email: state.email
+  email: state.login.email
 });
 
-export default connect(mapStateToProps)(BlogFooter);
+export default connect(mapStateToProps)(BlogMain);

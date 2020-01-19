@@ -24,8 +24,8 @@ const ToggleContainer = styled.button`
   }
 
   @media (max-width: 767px) {
-    top: 15px;
-    right: -225px;
+    top: -45px;
+    left: -250px;
     outline: none;
   }
 

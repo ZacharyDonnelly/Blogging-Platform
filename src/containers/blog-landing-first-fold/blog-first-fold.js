@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
@@ -9,9 +9,8 @@ import Toggle from "../../components/toggle/toggle";
 
 import "./blog-first-fold.scss";
 
-const BlogTop = props => {
+const BlogTop = () => {
   const [theme, setTheme] = useState("light");
-  const [email, setEmail] = useState(false);
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   const toggleTheme = () => {
@@ -21,10 +20,6 @@ const BlogTop = props => {
       setTheme("light");
     }
   };
-  useEffect(() => {
-    setEmail(localStorage.getItem("email", props.email));
-    console.log(email);
-  });
 
   return (
     <ThemeProvider theme={themeMode}>
@@ -65,7 +60,6 @@ const BlogTop = props => {
         </div>
       </div>
       <hr className="blog-hr" />
-      <h3 className="blog-featured">Featured posts</h3>
     </ThemeProvider>
   );
 };

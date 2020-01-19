@@ -74,8 +74,8 @@ const handleClick = async props => {
 };
 
 const mapStateToProps = state => ({
-  email: state.email,
-  password: state.password
+  email: state.login.email,
+  password: state.login.password
 });
 
 export default connect(mapStateToProps)(Login);

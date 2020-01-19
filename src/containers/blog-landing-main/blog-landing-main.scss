@@ -9,6 +9,10 @@ $font-family-header: "Open Sans", sans;
   align-items: center;
   align-content: center;
   justify-content: center;
+
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
 }
 
 .blog-footer-form {

@@ -45,5 +45,4 @@ const BlogMiddle = () => {
   );
 };
 
-// USE FLEXBOX..... 3 FEATURED ARTICLES...SLICE A CERTAIN AMOUNT OFF THE ARTICLE OFF TO DISPLAY AS PREVIEW
 export default BlogMiddle;

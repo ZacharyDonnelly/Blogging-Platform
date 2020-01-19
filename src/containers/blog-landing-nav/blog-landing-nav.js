@@ -52,7 +52,7 @@ BlogNav.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  email: state.email
+  email: state.login.email
 });
 
 export default connect(mapStateToProps)(BlogNav);

@@ -118,4 +118,8 @@ $color-lighter-black: #333;
   top: -1.8px !important;
   right: 8px !important;
   color: $nav-color;
+
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
 }
