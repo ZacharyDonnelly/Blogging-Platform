@@ -2,10 +2,11 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const postSchema = new Schema({
   body: String,
   title: String,
-  author: String
+  author: String,
+  date: String
 });
 
-export default mongoose.model("Post", userSchema);
+export default mongoose.model("Post", postSchema);

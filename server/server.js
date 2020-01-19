@@ -87,7 +87,8 @@ app.post("/posts", async ({ body }, res) => {
     const post = new postSchema({
       body: body.body,
       title: body.title,
-      author: body.author
+      author: body.author,
+      date: new Date()
     });
     await post.save();
   } catch (err) {
@@ -98,11 +99,14 @@ app.post("/posts", async ({ body }, res) => {
   res.send({ stored: "Success!" });
 });
 
-app.get("/getPosts", async res => {
+app.get("/getPosts", async (req, res) => {
   // const { data } = await postSchema.find();
   // res.send(JSON.parse(data));
-  const { data } = await postSchema.find();
-  res.send(JSON.parse(data));
+  const data = await postSchema.find();
+  console.log(data);
+
+  res.status(200);
+  res.send(data);
 });
 
 app.post("/users", async ({ body }, res) => {
