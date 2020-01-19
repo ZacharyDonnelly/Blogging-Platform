@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-import MapPost from "../map-posts/map-post";
+import AddPost from "../add-post/add-post";
 import "./blog-landing-main.scss";
 
 const BlogMain = () => {
@@ -14,7 +14,7 @@ const BlogMain = () => {
   return (
     <>
       <div className="blog-footer">
-        <MapPost />
+        {user ? <AddPost /> : <div style={{ display: "none" }} />}
         {user ? (
           <div className="hr-div" />
         ) : (

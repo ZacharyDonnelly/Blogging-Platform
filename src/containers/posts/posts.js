@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import "./posts.scss";
 
@@ -28,4 +29,10 @@ const Posts = ({ body, title, author }) => {
   );
 };
 
-export default Posts;
+const mapStateToProps = state => ({
+  author: state.post.author,
+  title: state.post.title,
+  body: state.post.body
+});
+
+export default connect(mapStateToProps)(Posts);
