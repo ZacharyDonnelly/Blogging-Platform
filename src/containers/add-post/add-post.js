@@ -12,7 +12,7 @@ const AddPost = props => {
   return (
     <div className="form-area">
       <h5 className="add-post-header">Add a Post!</h5>
-      <form className="post-edit">
+      <form className="post-edit" onSubmit={e => e.preventDefault()}>
         <label>
           Post Title
           <input
@@ -45,9 +45,7 @@ const AddPost = props => {
             required
           />
         </label>
-        <button type="submit" className="button">
-          Add Post
-        </button>
+        <button className="button">Add Post</button>
       </form>
     </div>
   );
@@ -56,7 +54,8 @@ const AddPost = props => {
 const mapStateToProps = state => ({
   title: state.post.title,
   author: state.post.author,
-  body: state.post.body
+  body: state.post.body,
+  fullPost: state.fullPost
 });
 
 export default connect(mapStateToProps)(AddPost);

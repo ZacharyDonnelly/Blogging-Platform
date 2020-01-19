@@ -28,7 +28,6 @@ const Login = props => (
             className="form-input"
             type="text"
             name="email"
-            value={props.email}
             onChange={e => props.dispatch(emailAction(e.target.value))}
             required
           />
@@ -39,7 +38,6 @@ const Login = props => (
             className="form-input"
             type="password"
             name="password"
-            value={props.password}
             onChange={e => props.dispatch(passwordAction(e.target.value))}
             required
           />

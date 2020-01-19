@@ -6,10 +6,12 @@ import { connect } from "react-redux";
 import SvgComponent from "../../utils/svg/nav-svg-config";
 import "./blog-landing-nav.scss";
 
-const BlogNav = ({ email }) => {
+const BlogNav = () => {
   const [scroll, setScroll] = useState(false);
+  const [user, setUser] = useState(false);
   const navRef = useRef(null);
   useEffect(() => {
+    setUser(localStorage.getItem("email"));
     const handleScroll = () => {
       if (window.scrollY > 0.001) {
         setScroll(true);
@@ -35,7 +37,7 @@ const BlogNav = ({ email }) => {
             </Link>
           </ul>
           <ul className="blog-list-right">
-            <li className="blog-link blog-li">{!email ? "Profile" : email}</li>
+            <li className="blog-link blog-li">{!user ? "Profile" : user}</li>
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />
         </div>

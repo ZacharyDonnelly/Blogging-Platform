@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { connect } from "react-redux";
 import { ThemeProvider } from "styled-components";
@@ -9,6 +9,7 @@ import { GlobalStyles } from "../../styled-components-config/global";
 import BlogNav from "../../containers/blog-landing-nav/blog-landing-nav";
 import BlogTop from "../../containers/blog-landing-first-fold/blog-first-fold";
 import BlogMain from "../../containers/blog-landing-main/blog-landing-main";
+import MapPosts from "../../containers/map-posts/map-post";
 import Posts from "../../containers/posts/posts";
 
 import "./blog-landing.scss";
@@ -24,14 +25,14 @@ const BlogLanding = () => {
         <BlogNav />
         <BlogTop />
         <BlogMain />
-        <Posts />
       </div>
     </ThemeProvider>
   );
 };
 
 const mapStateToProps = state => ({
-  email: state.email
+  title: state.title,
+  body: state.body
 });
 
 export default connect(mapStateToProps)(BlogLanding);

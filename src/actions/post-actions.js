@@ -12,3 +12,10 @@ export const bodyAction = (value = "") => ({
   type: "POST_BODY",
   value
 });
+
+export const postAction = (title = "", author = "", body = "") => ({
+  type: "POST_FULL",
+  title,
+  author,
+  body
+});
