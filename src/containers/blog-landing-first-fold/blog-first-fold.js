@@ -30,11 +30,6 @@ const BlogTop = props => {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <div className="blog-wrapper">
-        {email ? (
-          <div className="blog-add-post">Add Post</div>
-        ) : (
-          <div style={{ display: "none" }}></div>
-        )}
         <div className="blog-container">
           <div className="sidebar-container">
             <h2 className="sidebar-header">A Little Description..</h2>

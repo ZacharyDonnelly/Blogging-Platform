@@ -90,16 +90,3 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     margin-left: 155px;
   }
 }
-
-/**ADD POST**/
-
-.blog-add-post {
-  position: absolute;
-  top: 75px;
-  left: 50px;
-  text-transform: uppercase;
-  z-index: 30;
-  color: #fff;
-  font-size: 18px;
-  font-family: $font-family-body;
-}

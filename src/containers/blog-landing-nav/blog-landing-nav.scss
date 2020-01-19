@@ -107,6 +107,10 @@ $color-lighter-black: #333;
   }
 }
 
+.blog-li {
+  cursor: default;
+}
+
 .blog-avatar {
   position: absolute !important;
   z-index: 9 !important;

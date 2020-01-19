@@ -46,6 +46,10 @@ export const GlobalStyles = createGlobalStyle`
   color: ${({ theme }) => theme.text} !important;
 }
 
+.form-area {
+  background: ${({ theme }) => theme.body};
+}
+
 .blog-landing-root {
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text} !important;
