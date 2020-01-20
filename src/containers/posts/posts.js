@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { withRouter } from "react-router-dom";
 
 import "./posts.scss";
 
-const Posts = props => {
+const Posts = withRouter(props => {
+  const handleClick = useCallback(() => {
+    props.history.push(`/posts/${props.id}`);
+  }, [props.history]);
   return (
-    <div className="blog-post">
+    <div className="blog-post" onClick={handleClick}>
       <h3 className="blog-post-title">
         {props.title}
         <small>{props.date}</small>
@@ -26,12 +30,6 @@ const Posts = props => {
       </div>
     </div>
   );
-};
-
-// const mapStateToProps = state => ({
-//   author: state.post.author,
-//   title: state.post.title,
-//   body: state.post.body
-// });
+});
 
 export default Posts;

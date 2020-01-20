@@ -1,26 +1,53 @@
 $font-size: 1.45rem;
 $nav-height: 61px;
+$color-white: #fff;
 
 .profile-nav-wrapper {
   height: $nav-height;
+  position: relative;
 }
 
 .profile-nav-navbar {
-  background-color: #efefef;
-  height: $nav-height;
+  height: 61px;
+  background: transparentize($color-white, $amount: 0.7);
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+  line-height: 22.4px;
+  z-index: 3;
 }
 
 .profile-nav-list-left,
 .profile-nav-list-right,
 .profile-nav-list-logout {
   position: absolute;
+  display: flex;
   list-style: none;
+  text-decoration: none;
   font-size: $font-size;
   font-weight: 400;
   top: 1%;
   cursor: pointer;
   z-index: 2;
   text-decoration: none;
+}
+
+.post-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.45rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 11;
+  margin: 13px 10px 0 10px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.3) !important;
+  }
 }
 
 .profile-nav-list-left {

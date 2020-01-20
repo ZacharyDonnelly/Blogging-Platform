@@ -99,11 +99,22 @@ app.post("/posts", async ({ body }, res) => {
   res.send({ stored: "Success!" });
 });
 
+app.post("/postId", async (req, res) => {
+  try {
+    const post = await postSchema.findOne({
+      _id: req.body.id
+    });
+    res.status(200);
+    res.send(post);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 app.get("/getPosts", async (req, res) => {
   // const { data } = await postSchema.find();
   // res.send(JSON.parse(data));
   const data = await postSchema.find();
-  console.log(data);
 
   res.status(200);
   res.send(data);

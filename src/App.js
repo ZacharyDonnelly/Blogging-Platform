@@ -6,7 +6,7 @@ import HomePage from "../src/containers/homepage/homepage";
 import BlogLanding from "./components/blog-landing/blog-landing";
 import Login from "./components/login/login-page";
 import Signup from "./components/signup/signup-page";
-import ProfilePage from "./components/profile/profile-page";
+import FullPost from "../src/components/full-post/full-post";
 
 import configureStore from "./store/configureStore";
 const store = configureStore();
@@ -20,7 +20,7 @@ const App = () => (
       <Route path="/blog" exact component={BlogLanding} />
       <Route path="/login" exact component={Login} />
       <Route path="/signup" exact component={Signup} />
-      <Route path="/profile" exact component={ProfilePage} />
+      <Route path="/posts/:id" exact component={FullPost} />
     </BrowserRouter>
   </Provider>
 );

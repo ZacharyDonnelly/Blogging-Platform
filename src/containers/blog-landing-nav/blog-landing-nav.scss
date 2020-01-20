@@ -23,7 +23,7 @@ $color-lighter-black: #333;
 
 .blog-nav {
   height: 61px;
-  background: darken($color-white, 7%);
+  background: transparentize($color-white, $amount: 0.6);
   -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);

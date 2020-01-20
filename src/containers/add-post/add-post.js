@@ -56,6 +56,8 @@ const AddPost = props => {
 
 const handleClick = props => {
   axios.post("http://localhost:3006/posts", { ...props });
+
+  window.location.reload();
 };
 
 const mapStateToProps = state => ({
