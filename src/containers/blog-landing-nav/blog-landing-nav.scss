@@ -51,23 +51,13 @@ $color-lighter-black: #333;
   position: absolute;
   grid-area: midHeader;
   text-align: center;
-  height: 100px;
+  height: 50px;
   left: 0;
+  z-index: 11;
   right: 0;
   top: -60px;
   @media (max-width: 768px) {
     display: none;
-  }
-
-  .blog-nav-svg-logo {
-    z-index: 11;
-    height: 200px;
-    color: $nav-color;
-    cursor: default;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 }
 

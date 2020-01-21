@@ -35,8 +35,9 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV !== "production"
+            ? "style-loader"
+            : MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
           "sass-loader"
@@ -49,7 +50,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css"
+      filename: "style.[contenthash].css",
+      chunkFilename: "[id].css"
     }),
     new HtmlWebpackPlugin({
       inject: false,

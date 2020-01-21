@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
 
-// import SvgComponent from "../../../public/assets/svg/nav-svg-config";
 import "./blog-landing-nav.scss";
 
 const BlogNav = () => {
@@ -40,9 +39,6 @@ const BlogNav = () => {
           </ul>
           <Avatar size={64} icon="user" className="blog-avatar" />
         </div>
-        <h2 className="nav-center">
-          {/* <SvgComponent className="blog-nav-svg-logo" /> */}
-        </h2>
       </nav>
     </div>
   );

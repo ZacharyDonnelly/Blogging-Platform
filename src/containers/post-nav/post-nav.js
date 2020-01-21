@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
-// import SvgComponent from "../../../public/assets/svg/nav-svg-config";
 import "./post-nav.scss";
 
 const PostNav = () => {
@@ -43,13 +42,6 @@ const PostNav = () => {
           </ul>
           <Avatar size={64} icon="user" className="profile-avatar" />
         </div>
-        <h2 className="nav-center">
-          {/* <SvgComponent
-            className="blog-nav-svg-logo"
-            style={{ cursor: "pointer" }}
-            onClick={() => props.history.push("/blog")}
-          /> */}
-        </h2>
       </nav>
     </div>
   );
@@ -57,6 +49,7 @@ const PostNav = () => {
 
 const signOut = () => {
   window.localStorage.removeItem("email");
+  window.localStorage.clear();
 };
 
 export default PostNav;

@@ -20,6 +20,9 @@ My developer blog built on: Custom Webpack/babel config(No CRA), ReactJS/Hooks/R
 
 Dark Mode available
 
+If you would like to leave a comment please sign in!
+(coming soon)
+
 ```
  Custom Webpack/babel config(No CRA) ~ Development stuff, bundling, polyfilling, transpiling
  ReactJS/Hooks(for refs)/Redux ~ React-JavaScript UI library, hooks/redux-state management
@@ -30,7 +33,7 @@ Dark Mode available
  SCSS ~ CSS preprocessor
  Styled Components ~ UI library for global styles/reusable components
  Ant.design ~ Used a few small components for easier development
- SVG ~ Custom icons i made (not the best lol)
+ SVG ~ For dark mode slider (removed other logos)
  GraphQL/Apollo ~ May add later to speed up queries/mutations
 ```
 
