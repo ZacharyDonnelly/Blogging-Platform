@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "antd";
-import { connect } from "react-redux";
 
 import SvgComponent from "../../utils/svg/nav-svg-config";
 import "./blog-landing-nav.scss";
@@ -49,12 +48,4 @@ const BlogNav = () => {
   );
 };
 
-BlogNav.defaultProps = {
-  email: "Profile"
-};
-
-const mapStateToProps = state => ({
-  email: state.login.email
-});
-
-export default connect(mapStateToProps)(BlogNav);
+export default BlogNav;

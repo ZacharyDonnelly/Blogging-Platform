@@ -57,10 +57,6 @@ const validateAuth = (req, res, next) => {
   next();
 };
 
-app.get("/thing", validateAuth, (req, res) => {
-  res.send("Working!!");
-});
-
 app.post("/verify", async ({ body }, res) => {
   // put logic within /users route
   try {

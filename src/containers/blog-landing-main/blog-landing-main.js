@@ -14,7 +14,11 @@ const BlogMain = () => {
   return (
     <>
       <div className="blog-footer">
-        {user ? <AddPost /> : <div style={{ display: "none" }} />}
+        {user === "Administrator" ? (
+          <AddPost />
+        ) : (
+          <div style={{ display: "none" }} />
+        )}
         {user ? (
           <div className="hr-div" />
         ) : (

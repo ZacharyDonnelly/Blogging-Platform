@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Lato,500");
+
+.blog-post-full {
+  margin: 35px 75px;
+  line-height: 24px;
+  color: #0a0a0a;
+  display: block;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  min-height: 100vh;
+  max-height: 350vh;
+  text-align: center;
+}
+
+.full-post-container {
+  text-align: center;
+  display: block;
+  margin-left: 300px;
+}
+
+.full-img {
+  position: absolute;
+  top: 0;
+  width: 102vw;
+  height: 475px;
+  right: 0;
+  margin-bottom: 75px;
+}
+
+.blog-post-full-title {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  margin-right: 395px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.full-post-menu {
+  margin: 0 7.5px 45px 150px;
+  padding: 5px;
+  width: 55%;
+}
+.full-post-menu-item {
+  margin: 0 17.5px;
+}
+
+.full-post-body {
+  font-size: 20px;
+  letter-spacing: -1px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.9rem;
+  width: 75%;
+  text-indent: 65px;
+  margin-bottom: 75px;
+}

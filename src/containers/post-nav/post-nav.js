@@ -4,7 +4,7 @@ import { Avatar } from "antd";
 import SvgComponent from "../../utils/svg/nav-svg-config";
 import "./post-nav.scss";
 
-const PostNav = () => {
+const PostNav = props => {
   const [scroll, setScroll] = useState(false);
   const [user, setUser] = useState(false);
   const navRef = useRef(null);
@@ -44,7 +44,11 @@ const PostNav = () => {
           <Avatar size={64} icon="user" className="profile-avatar" />
         </div>
         <h2 className="nav-center">
-          <SvgComponent className="blog-nav-svg-logo" />
+          <SvgComponent
+            className="blog-nav-svg-logo"
+            style={{ cursor: "pointer" }}
+            onClick={() => props.history.push("/blog")}
+          />
         </h2>
       </nav>
     </div>
