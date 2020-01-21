@@ -1,28 +1,24 @@
-/* eslint-disable no-undef */
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackMd5Hash = require("webpack-md5-hash");
 
 module.exports = {
-  entry: ["@babel/polyfill", "./src/index.js"],
+  entry: { main: ["@babel/polyfill", "./src/index.js"] },
   output: {
-    filename: "./bundle.js",
-    path: path.resolve(__dirname, "dist") // base path where to send compiled assets
-  },
-  resolve: {
-    extensions: ["*", ".js", ".jsx"],
-    alias: {
-      "@": path.resolve(__dirname, "src") // shortcut to reference src folder from anywhere
-    }
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[chunkhash].js"
   },
   module: {
     rules: [
       {
-        loader: "babel-loader",
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.s?css$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
       },
       {
         // config for images
@@ -37,22 +33,30 @@ module.exports = {
         ]
       },
       {
-        // config for fonts
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.s?css$/,
         use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "fonts"
-            }
-          }
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
         ]
       }
     ]
   },
-  devtool: "cheap-module-eval-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "public"),
     historyApiFallback: true
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.[contenthash].css"
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: "./public/index.html",
+      filename: "index.html"
+    }),
+    new WebpackMd5Hash()
+  ]
 };

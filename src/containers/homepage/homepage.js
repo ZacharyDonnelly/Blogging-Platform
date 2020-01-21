@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../styled-components-config/theme";
 import { GlobalStyles } from "../../styled-components-config/global";
 import Toggle from "../../components/toggle/toggle";
-import HomepageSvgComponent from "../../utils/svg/homepage-svg";
+// import HomepageSvgComponent from "../../../public/assets/svg/homepage-svg";
 
 import "./homepage.scss";
 
@@ -22,7 +22,7 @@ const HomePage = () => {
       <div className="wrapper">
         <span className="homepage-svg-span" />
         <span className="homepage-svg-span-wrapper">
-          <HomepageSvgComponent className="homepage-svg" />
+          {/* <HomepageSvgComponent className="homepage-svg" /> */}
         </span>
         <div className="box header">
           <ul className="homepage-list">
