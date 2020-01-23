@@ -20,6 +20,12 @@
   text-align: center;
   display: block;
   margin-left: 300px;
+
+  @media (max-width: 768px) {
+    margin-top: 250px;
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .full-img {
@@ -36,7 +42,7 @@
   letter-spacing: 2.5px;
   margin-bottom: 15px;
   font-size: 40px;
-  margin-right: 395px;
+  margin-right: 375px;
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -59,4 +65,9 @@
   width: 75%;
   text-indent: 65px;
   margin-bottom: 75px;
+
+  @media (max-width: 768px) {
+    width: 40%;
+    margin: 0;
+  }
 }

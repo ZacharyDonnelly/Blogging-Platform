@@ -9,7 +9,6 @@ import {
   tokenAction
 } from "../../actions/form-actions";
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
-import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
 import LoginNav from "../../containers/login-nav/login-nav";
 import "./login.scss";
 
@@ -47,7 +46,6 @@ const Login = props => (
       <Link to="/signup" className="login-form-link">
         Don&apos;t have an account? Click here to sign up
       </Link>
-      <SignupButtonRed value={"in"} />
       <SignupButtonBlack
         value={"Sign-in"}
         buttonClick={() => handleClick(props)}

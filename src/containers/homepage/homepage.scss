@@ -34,8 +34,8 @@ $font-family-body: "Lato", sans-serif;
     text-align: center;
     margin-left: 50px;
     overflow: scroll;
-    height: 125vh !important;
-    width: 130vw !important;
+    height: 110vh !important;
+    width: 106vw !important;
   }
 }
 
@@ -54,9 +54,9 @@ $font-family-body: "Lato", sans-serif;
   }
   @media (max-width: 768px) {
     display: flex;
+    font-size: 48px;
     align-items: center;
     align-content: center;
-    margin: 0 50px 25px 25px;
   }
 }
 
@@ -72,6 +72,7 @@ $font-family-body: "Lato", sans-serif;
     align-items: center;
     align-content: center;
     justify-content: center;
+    text-align: justify;
   }
 }
 
@@ -96,10 +97,10 @@ $font-family-body: "Lato", sans-serif;
 
   @media (max-width: 768px) {
     position: absolute;
-    margin-left: 40px;
     width: 425px;
     height: 275px;
-    top: 115%;
+    margin: 0;
+    bottom: 0;
   }
 }
 
@@ -121,7 +122,7 @@ $font-family-body: "Lato", sans-serif;
     padding-top: 45px;
     .homepage-list-item {
       list-style: none;
-      margin: 0 20px 0 0;
+      margin-right: 40px;
       font-family: $font-family-header;
     }
   }
@@ -130,12 +131,19 @@ $font-family-body: "Lato", sans-serif;
     position: absolute;
     top: -25px;
     font-size: 25px;
-    margin-left: 20px;
     align-items: center;
     align-content: center;
     justify-content: center;
     text-align: center;
   }
+}
+.homepage-link {
+  list-style: none;
+  text-decoration: none;
+}
+.link {
+  list-style: none;
+  text-decoration: none;
 }
 
 .homepage-svg-span-wrapper {

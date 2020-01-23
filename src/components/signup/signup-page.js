@@ -4,7 +4,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import SignupButtonBlack from "../../containers/form-buttons/signup-button-black";
-import SignupButtonRed from "../../containers/form-buttons/signup-button-red";
 import LoginNav from "../../containers/login-nav/login-nav";
 import "./signup.scss";
 import {
@@ -60,7 +59,6 @@ const Signup = props => {
         <Link to="/login" className="login-form-link">
           Already have an account? Click here to sign in
         </Link>
-        <SignupButtonRed />
         <SignupButtonBlack buttonClick={() => handleSubmit(props)} />
       </div>
     </>

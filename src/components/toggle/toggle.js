@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ToggleContainer = styled.button`
   position: absolute;
-  top: 69px;
+  top: 550px;
   right: 0;
   z-index: 1;
   display: flex;
@@ -24,7 +24,7 @@ const ToggleContainer = styled.button`
   }
 
   @media (max-width: 767px) {
-    top: -45px;
+    top: 545px;
     left: -250px;
     outline: none;
   }

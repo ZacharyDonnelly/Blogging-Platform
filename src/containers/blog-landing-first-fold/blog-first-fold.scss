@@ -6,7 +6,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
 .blog-wrapper {
   max-width: 100%;
-  height: 100vh;
+  height: 55vh;
   display: -ms-grid;
   display: grid;
   gap: 0 100px;
@@ -25,8 +25,7 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   @media screen and (max-width: 767px) {
     display: block;
     position: relative;
-    height: 100vh;
-    margin-bottom: 100px;
+    height: 30vh;
     font-size: 14px;
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
@@ -65,21 +64,24 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   @media screen and (max-width: 767px) {
     width: 95%;
     margin-left: 0;
+    z-index: 11;
   }
 }
 /**IMAGE STYLES**/
 
 .blog-img {
   position: absolute;
-  right: 112px;
-  bottom: 150px;
-  height: 669px;
-  background: url(../../../public/assets/PS-Blog.png) center center no-repeat;
+  top: 0;
+  width: 102vw;
+  right: 0;
+  height: 510px;
+  background: url("https://images.unsplash.com/photo-1576235789670-28a9c8e950b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
+    center center no-repeat;
   background-size: cover;
   z-index: 2;
 
-  @media screen and(max-width: 767px) {
-    display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
   }
 }
 
@@ -92,6 +94,5 @@ $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
   @media screen and(max-width: 767px) {
     display: none;
-    margin-bottom: 250px;
   }
 }

@@ -18,6 +18,9 @@ export const GlobalStyles = createGlobalStyle`
 .homepage-header {
   color: ${({ theme }) => theme.text} !important;
 }
+.post-body {
+  color: ${({ theme }) => theme.text} !important;
+}
 .blog-add-post{
   color: ${({ theme }) => theme.text} !important;
 }
