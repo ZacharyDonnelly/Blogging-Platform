@@ -9,7 +9,7 @@
 Similarly to my RTC application, the motivation behind creating this was out of curiousity. At the time of this application's inception, I was reading a lot of Medium articles. Also, I had never actually implemented my own version of user auth. Considering I had used Firebase for my previous fullstack application, I was pretty spoiled when it came to authentication. So after some lengthy nights of reading docs I had finally figured out JWT & bcrypt!
 <br />
 <br />
-  The majority of this app was experimentation of a few newer(to me) technologies. Aside from the authentication aspect, I also tested out things such as my own Webpack configuration, Styled Components, MongoDB & the ORM Mongoose! Overall, despite not deploying this application I am still happy with how it turned out. Though, I am even happier with the amount o
+  The majority of this app was experimentation of a few newer(to me) technologies. Aside from the authentication aspect, I also tested out things such as my own Webpack configuration, Styled Components, MongoDB & the ORM Mongoose! Overall, despite not deploying this application I am still happy with how it turned out. Though, I am even happier with the amount of new technologies/methods that I learned!
 
 ## Stack
 
