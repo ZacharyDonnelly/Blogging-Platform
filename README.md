@@ -1,6 +1,21 @@
 # Bloggr
 
-![status](https://img.shields.io/badge/Status-UnderConstruction-red) ![website](https://img.shields.io/badge/Website-Offline-red) ![license](https://img.shields.io/badge/License-MIT-brightgreen) ![updated](https://img.shields.io/badge/Updated-Today-brightgreen) ![eslint](https://img.shields.io/badge/eslint-^3.0.0-blue)
+![website](https://img.shields.io/badge/Website-Offline-red) ![license](https://img.shields.io/badge/License-MIT-brightgreen) ![updated](https://img.shields.io/badge/Updated-3/4/2020-brightgreen) ![eslint](https://img.shields.io/badge/eslint-^3.0.0-blue)
+
+<hr />
+
+# Motivation
+
+Similarly to my RTC application, the motivation behind creating this was out of curiousity. At the time of this application's inception, I was reading a lot of Medium articles. Also, I had never actually implemented my own version of user auth. Considering I had used Firebase for my previous fullstack application, I was pretty spoiled when it came to authentication. So after some lengthy nights of reading docs I had finally figured out JWT & bcrypt!
+<br />
+<br />
+  The majority of this app was experimentation of a few newer(to me) technologies. Aside from the authentication aspect, I also tested out things such as my own Webpack configuration, Styled Components, MongoDB & the ORM Mongoose! Overall, despite not deploying this application I am still happy with how it turned out. Though, I am even happier with the amount of new technologies/methods that I learned!
+
+## Stack
+
+Webpack/Babel, JavaScript, React, React Hooks/Redux, SCSS/Styled Components(for dark/light theme), NodeJS/Express, MongoDB/Mongoose & finally JWT/bcrypt.
+
+<hr />
 
 ## Installation
 
@@ -14,27 +29,6 @@ You can also use [NPM](https://www.npmjs.com) to install dependencies.
 
 ```
 npm install
-```
-
-My developer blog built on: Custom Webpack/babel config(No CRA), ReactJS/Hooks/Redux, NodeJS/Express, JWT/bcrypt for user auth, MongoDB/Mongoose for storage, NextJS, SCSS/Styled Components, GraphQL, & Apollo
-
-Dark Mode available
-
-If you would like to leave a comment please sign in!
-(coming soon)
-
-```
- Custom Webpack/babel config(No CRA) ~ Development stuff, bundling, polyfilling, transpiling
- ReactJS/Hooks(for refs)/Redux ~ React-JavaScript UI library, hooks/redux-state management
- NodeJS/Express ~ Backend/server JavaScript
- JWT/bcrypt for user auth ~ Bcrypt-Password Hashing/Salting, JWT-Unique User tokens for Authorization
- MongoDB/Mongoose ~ MongoDB-Storage for posts/users, Mongoose-ORM to connect MongoDB and Node
- NextJS ~ SSR library for JavaScript-may add later
- SCSS ~ CSS preprocessor
- Styled Components ~ UI library for global styles/reusable components
- Ant.design ~ Used a few small components for easier development
- SVG ~ For dark mode slider (removed other logos)
- GraphQL/Apollo ~ May add later to speed up queries/mutations
 ```
 
 ## Contributing
