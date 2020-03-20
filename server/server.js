@@ -1,11 +1,8 @@
 import express from "express";
 import cors from "cors";
-// import { ApolloServer } from "apollo-server-express";
-// import graphqlHTTP from "express-graphql";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-// import schema from "./schemas/gqlSchema";
 import { MONGO_URI, JWT_SECRET } from "./config/settings";
 import userSchema from "./schemas/users";
 import postSchema from "./schemas/postSchema";
@@ -16,23 +13,6 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true });
 app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
-
-// const resolvers = {
-//   hello: () => "Hello world!",
-//   age: () => 1122334,
-//   oldEnough: () => false
-// };
-
-// app.use(
-//   "/graphql",
-//   graphqlHTTP({
-//     schema,
-//     rootValue: resolvers,
-//     graphiql: true
-//   })
-// );
-// const server = new ApolloServer({ schema });
-// server.applyMiddleware({ app });
 
 const validateAuth = (req, res, next) => {
   const authHeader = req.headers["authorization"];

@@ -56,7 +56,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: "./public/index.html",
       filename: "index.html"
     }),
     new WebpackMd5Hash()
