@@ -17,6 +17,10 @@ Webpack/Babel, JavaScript, React, React Hooks/Redux, SCSS/Styled Components(for 
 
 <hr />
 
+![Homepage](https://i.imgur.com/RXWyPQM.png)
+
+<hr />
+
 ## Installation
 
 Use the package manager [Yarn](https://yarnpkg.com/lang/en/) to install dependencies.
