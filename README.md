@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bloggr
 
 ![website](https://img.shields.io/badge/Website-Offline-red) ![license](https://img.shields.io/badge/License-MIT-brightgreen) ![updated](https://img.shields.io/badge/Updated-3/4/2020-brightgreen) ![eslint](https://img.shields.io/badge/eslint-^3.0.0-blue)
@@ -90,4 +89,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
->>>>>>> 0368d445dbcd3bd841e4d92ee72abfb2ca5269aa
